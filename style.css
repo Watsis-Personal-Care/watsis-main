@@ -24,23 +24,24 @@
     text-align: center;
 }
 
-.cart .remove_icon{
-    color:black;
-    text-decoration: none;
+.remove_icon img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
-.cart .product_info{
+.product_info{
     display: flex;
     flex-wrap: wrap;
 }
 
-.cart .product_info img{
+.product_info img{
     width: 200px;
     height: 200px;
     margin-right: 10px;
 }
 
-.cart .product_info p{
+.product_info p{
     position: relative;
     top: 80px;
 }
@@ -71,6 +72,90 @@
 
 }
 
+.wishlist .heading{
+    text-align: center;
+    font-size: 40px;
+    font-family: serif;
+    color: rgb(0, 0, 0);
+    font-weight:200;
+    padding: 30px 0px 0px 0px;
+}
 
+.wishlist .box_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 120px;
+}
 
+.wishlist .box_container .box{
+    flex: 1 1 380px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
 
+.wishlist .box_container .box .product .stock_status{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(102, 152, 131);
+    font-size: 15px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.wishlist .box_container .box .product .image{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.wishlist .box_container .box .product .image img{
+    width: 300px;
+    height: 300px;
+}
+
+.wishlist .box_container .box .product:hover .image img{
+    transform: scale(1.1);
+}
+
+.wishlist .box_container .box .product .content{
+    margin-bottom: 60px;
+    text-align:center;
+    position: relative;
+}
+
+.wishlist .box_container .box .btn{
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.wishlist .box_container .box:hover .btn{
+    bottom:0;
+}
+
+.wishlist .box_container .box .btn a{
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.wishlist .box_container .box .btn .addcartbtn{
+    background-color:rgb(231, 247, 240);
+    color:rgb(0, 0, 0);
+}
+
+.wishlist .box_container .box .btn .removebtn{
+    background-color:rgb(194, 202, 199);
+    color:rgb(0, 0, 0);
+}
