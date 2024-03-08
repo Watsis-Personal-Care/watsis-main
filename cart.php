@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,6 +13,7 @@
         <div class="heading">
             <h2 class="my_shopping_bag">My Shopping Bag</h2>
         </div>
+
         <div class="box_container">
             <div class="prod_box">
                 <div class="cart_prod">
@@ -108,7 +110,10 @@
                 </div>
             </div>
         </div>
+
     </section>
+
+    <!--Related product-->
 
     <!--Footer-->
 </body>
