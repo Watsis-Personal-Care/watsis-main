@@ -381,3 +381,110 @@ body{
     background-color:rgb(194, 202, 199);
     color:rgb(0, 0, 0);
 }
+
+/* Footer styles */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer-left{
+  text-align: left;
+  margin-left: 30px;
+}
+
+.footernav-left a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  transition: background-size 0.3s; /* Add transition for smoother effect */
+}
+
+.footernav-left a:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+}
+
+/* The copy right stuff */
+.footer-center{
+  align-self: flex-end;
+}
+
+.footer-right{
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+/* End of footer style */
+
+/* Social Media style */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25px;
+  text-align: right;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+/* Facebook */
+.fa-facebook {
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+  color: white;
+}
+
+/* Instagram */ 
+.fa-instagram {
+  color: white;
+}
+/* End of Social Media style*/
+
+/* Back to top button style */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#back-to-top-btn:hover {
+  background-color: #555;
+}
+/* End of back to top button style */
