@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* Style tab links */
+            .tablink {
+                background-color: #555;
+                color: white;
+                float: left;
+                border: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 50%;
+            }
+            
+            .sign-in-tab{
+                border-radius: 25px 0px 0px 0px;
+            }
+            
+            .sign-up-tab{
+                border-radius: 0px 25px 0px 0px;
+            }
+            
+            .tablink:hover {
+                background-color: #777;
+            }
+            
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+                color: black;
+                display: none;
+                padding: 20px;
+                height: 50%;
+                outline: 5px solid black;
+                border-radius: 25px;
+                text-align: center;
+            }
+            
+            /* Style the form inputs */
+            .tabcontent input[type="text"],
+            .tabcontent input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            
+            /* Style the form buttons */
+            .tabcontent button {
+                background-color: #1b37d6;
+                color: white;
+                padding: 14px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+            }
+            
+            /* Add some margin between form elements */
+                .tabcontent input[type="text"],
+                .tabcontent input[type="password"],
+                .tabcontent button {
+                margin-top: 10px;
+            }
+            /* End of styling sign in up form*/
+        </style>
+
+        <script>
+            // Switch the tab for the sign in up form
+            function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen-sign-in").click();
+        </script>
+    </head>
+    <body>
+        <div class="sign-in-up-form">
+            <div class="tablink-container">
+                <button class="tablink sign-in-tab" onclick="openPage('sign-in', this)" id="defaultOpen-sign-in">Sign in</button>
+                <button class="tablink sign-up-tab" onclick="openPage('sign-up', this)">Sign up</button>
+            </div>
+
+            <div id="sign-in" class="tabcontent">
+                <input type="text" placeholder="Username" name="uname" required><br>
+                <input type="password" placeholder="Password" name="psw" required><br>
+                <button type="submit">Login</button>
+            </div>
+
+            <div id="sign-up" class="tabcontent">
+                <input type="text" placeholder="Email" name="email" required><br>
+                <input type="text" placeholder="Username" name="uname" required><br>
+                <input type="password" placeholder="Password" name="psw" required><br>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+                <button type="submit">Register</button>
+            </div>
+        </div>
+    </body>
+</html>
