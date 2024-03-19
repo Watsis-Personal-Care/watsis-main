@@ -6,6 +6,7 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <!--Nav Bar-->
