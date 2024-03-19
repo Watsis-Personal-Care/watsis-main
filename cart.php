@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Nav Bar-->
-
+    <?php include('templates/header.php')?>
     <!--Cart-->
     <section class="cart">
         <div class="heading">
@@ -18,9 +20,7 @@
             <div class="prod_box">
                 <div class="cart_prod">
                     <div class="remove_icon">
-                        <a href="#">
-                            <img src="images/dustbin.png" alt="Remove">
-                        </a>
+                        <a href="#"><i class="fa-regular fa-trash-can"></i></a>
                     </div>
 
                     <div class="prod_img">
@@ -49,9 +49,7 @@
 
                 <div class="cart_prod">
                     <div class="remove_icon">
-                        <a href="#">
-                            <img src="images/dustbin.png" alt="Remove">
-                        </a>
+                        <a href="#"><i class="fa-regular fa-trash-can"></i></a>
                     </div>
 
                     <div class="prod_img">
@@ -116,5 +114,6 @@
     <!--Related product-->
 
     <!--Footer-->
+    <?php include('templates/footer.php')?>
 </body>
 </html>
