@@ -7,7 +7,7 @@
 </head>
 <body>
     <!--Nav Bar-->
-
+    <?php include('templates/header.php')?>
     <!--Wishlist-->
     <section class="wishlist">
 
@@ -88,7 +88,7 @@
     </section>
 
     <!--Footer-->
-
+    <?php include('templates/footer.php')?>
 </body>
 </html>
 

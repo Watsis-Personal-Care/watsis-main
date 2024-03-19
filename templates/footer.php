@@ -16,7 +16,7 @@
             <a href="#">Product</a>
             <a href="#">Contact</a>
         </nav>
-        <img src="Watsis_xbg.png" alt="logo" width = "180px">
+        <img src="images/Watsis_xbg.png" alt="logo" width = "180px">
       </div>
 
       <div class="footer-center">

@@ -11,7 +11,7 @@
     <header class="topnav">
       <!-- Centered link -->
       <div class="topnav-centered">
-        <a href="index.html"><img src="watsis_personal_care.png" class="logo"></a>
+        <a href="index.html"><img src="images/watsis_personal_care.png" class="logo"></a>
       </div>
       
       <!-- Left-aligned links (default) -->
