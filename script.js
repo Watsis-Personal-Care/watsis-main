@@ -26,6 +26,13 @@ function scrollFunction() {
     document.querySelector(".topnav").style.padding = "90px 10px";
     document.querySelector(".logo").style.width= "375px";
   } 
+
+  // Show the back-to-top button when user scrolls down
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("back-to-top-btn").style.display = "block";
+  } else {
+        document.getElementById("back-to-top-btn").style.display = "none";
+  }
 }
 
 // Function to scroll to the top of the page smoothly
@@ -36,13 +43,10 @@ function scrollToTop() {
     });
 }
 
-// Show the back-to-top button when user scrolls down
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("back-to-top-btn").style.display = "block";
-    } else {
-        document.getElementById("back-to-top-btn").style.display = "none";
-    }
+// Function to scroll the homepage scroll container
+function scrollSmooth(direction) {
+  const scrollContainer = document.querySelector(".homepage-scroll-container");
+  const step = 50; // Number of pixels to scroll per step
+  const increment = direction === 'left' ? -step : step;
+  scrollContainer.scrollLeft += increment;
 }
