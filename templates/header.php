@@ -17,7 +17,7 @@
       <!-- Left-aligned links (default) -->
       <!-- Use any element to open the sidenav -->
       <span onclick="openNav()">
-        <div class="container" onclick="myFunction(this)">
+        <div class="barscontainer" onclick="myFunction(this)">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
