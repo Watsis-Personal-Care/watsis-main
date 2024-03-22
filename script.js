@@ -42,11 +42,3 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
-
-// Function to scroll the homepage scroll container
-function scrollSmooth(direction) {
-  const scrollContainer = document.querySelector(".homepage-scroll-container");
-  const step = 50; // Number of pixels to scroll per step
-  const increment = direction === 'left' ? -step : step;
-  scrollContainer.scrollLeft += increment;
-}
