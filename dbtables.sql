@@ -71,3 +71,23 @@ INSERT INTO products (product_name, product_type, product_description, product_p
 VALUES ('LA’DOR Wonder Hair Serum 100ml', 'Hair Care', 'LA’DOR Wonder Hair Serum is a light moisturizing serum that smoothes and protects dry and frizzy hair from high temperatures, coating it with an invisible moisture barrier. 
 Formulated with Icelandic cetraria extract (Icelandic moss) and algae to soften hair, eliminates dryness, prevent brittleness, promote hair elasticity and strength without weighing it down.',
 'RM135.00', 'images/hairserum1.png', 'images/hairserum2.png', 'images/hairserum3.png', 'images/hairserum4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('ZenyumSonic™ Electric Toothbrush', 'Dental Care', 'ZenyumSonic Electric Toothbrush Matte Black vibrates 33,000 times a minute (Faster than typical electric toothbrush) to help you clean your teeth more effectively. Comes with 3 different modes for all your different needs – Clean, Gentle, and White. Also, the multi-purpose brush head with tongue-cleaner ensures you can clean even more when you brush.',
+'RM219.00', 'images/toothbrush1.png', 'images/toothbrush2.png', 'images/toothbrush3.png', 'images/toothbrush4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Colgate Maximum Cavity Protection Great Regular Flavour Toothpaste', 'Dental Care', 'Colgate Maximum Cavity Protection Great Regular Flavour toothpaste prepares your child for life by making them strong from within and this strength is reflected in her smile. Colgate with Calcium Boost# adds natural calcium^ to their teeth. So her smile stays strong with within.',
+'RM10.99', 'images/toothpaste1.png', 'images/toothpaste2.png', 'images/toothpaste3.png', 'images/toothpaste4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('LISTERINE TOTAL CARE SENSITIVE SOOTHING TASTE', 'Dental Care', 'Zero Alcohol/ Soothing Taste Mouthwash Used twice daily after brushing, Listerine® Total Care Sensitive Mouthwash with Multi Benefits kills 99.9% of germs* and provides effective sensitivity protection',
+'RM30.80', 'images/mouthwash1.png', 'images/mouthwash2.png', 'images/mouthwash3.png', 'images/mouthwash4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Oral-B Essential Cavity Defense Mint Floss(50m)', 'Dental Care', 'Oral-B Essential Floss Cavity Defense helps remove plaque to reduce cavities. It cleans where your brush can’t reach, thanks to its wax coating and shred-resistant design. This floss effectively removes plaque and particles between your teeth and just below the gum line. Plus, it has a refreshing mint flavor.',
+'RM9.90', 'images/toothfloss1.png', 'images/toothfloss2.png', 'images/toothfloss3.png', 'images/toothfloss4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Vaseline Lip Therapy Original, 0.25oz.', 'Dental Care', 'Vaseline Lip Care has a complete range to help calm, soothe and instantly moisturize dry lips. Blended with a combination of petroleum jelly alongside a curated blend of trusted, lip-loving ingredients, Vaseline Lip Care is available in several variants to suit all skin types. With consistent use of your favorite Vaseline Lip Care, you can say farewell to dry lips forever.',
+'RM6.00', 'images/lipbalm1.png', 'images/lipbalm2.png', 'images/lipbalm3.png', 'images/lipbalm4.png');
