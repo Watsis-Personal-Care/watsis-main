@@ -91,3 +91,23 @@ VALUES ('Oral-B Essential Cavity Defense Mint Floss(50m)', 'Dental Care', 'Oral-
 INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
 VALUES ('Vaseline Lip Therapy Original, 0.25oz.', 'Dental Care', 'Vaseline Lip Care has a complete range to help calm, soothe and instantly moisturize dry lips. Blended with a combination of petroleum jelly alongside a curated blend of trusted, lip-loving ingredients, Vaseline Lip Care is available in several variants to suit all skin types. With consistent use of your favorite Vaseline Lip Care, you can say farewell to dry lips forever.',
 'RM6.00', 'images/lipbalm1.png', 'images/lipbalm2.png', 'images/lipbalm3.png', 'images/lipbalm4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Volcanic BHA Pore Cleansing Foam 150g', 'Skin Care', 'A deep-cleansing foam that contains Jeju Volcanic Clusters and BHA properties to absorb excess sebum and cleanse pores.',
+'RM48.00', 'images/cleanser1.png', 'images/cleanser2.png', 'images/cleanser3.png', 'images/cleanser4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Dr. G R.E.D Blemish Clear Soothing Toner 300ml', 'Skin Care', 'This refreshing and cooling toner is a best-friend to acne and sensitive skin. With its gentle formula enriched with cica extract AHA and BHA, skin becomes smooth and soothed.',
+'RM135.00', 'images/toner1.png', 'images/toner2.png', 'images/toner3.png', 'images/toner4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('SK-II Skinpower Advanced Airy Cream 50g', 'Skin Care', 'SK-II’s prestige anti-aging solution, with the new formulation, harnesses the power of nature with powerful science. Packed with a combination of Pitera, Kinren4 and Peony Extract4, it revitalises the skin’s youth from this source, shields skin from daily stressors and reduces factors that trigger signs of ageing. Additionally, Peony extract has proven efficacy on reducing roughness and plumping up skin, for a youthful complexion, giving you the feel of 160% firm skin and 175% visible wrinkle reduction. The formula has an airy light texture that melts into the skin to intensely hydrate and lock in moisture.',
+'RM520.00', 'images/moisturizer1.png', 'images/moisturizer2.png', 'images/moisturizer3.png', 'images/moisturizer4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('MARIO BADESCU Anti Acne Serum 29ml', 'Skin Care', 'Anti Acne Serum is a preventive solution against breakouts. This product contains Salicylic Acid which inhibit bacteria from causing pimples. Its lightweight, non-drying gel formula is easily absorbed by the skin and helps maintain a clear and smooth complexion.',
+'RM118.00', 'images/anceserum1.png', 'images/anceserum2.png', 'images/anceserum3.png', 'images/anceserum4.png');
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('STARSKIN VIP Crème De La Crème™ Age-Perfecting Luxury Cream Coated Sheet Face Mask 18g', 'Skin Care', 'A one-of-a-kind sheet face mask made out of two layers. The inner layer is coated with a remarkable 18g of super-concentrated, luxurious cream while the outer protective layer functions as a shield. This delivery system allows you to force-feed dry and depleted skin with almost half a jar of cream in just one treatment to ensure ultimate nourishment and absorption, and spectacular result.',
+'RM75.00', 'images/masksheet1.png', 'images/masksheet2.png', 'images/masksheet3.png', 'images/masksheet4.png');
