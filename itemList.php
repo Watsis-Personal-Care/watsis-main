@@ -15,7 +15,7 @@
 		<h2>Product List</h2>
 		<p>Personal Care</p>
 		<div class="pro-container">
-			<div class ="pro">
+			<div class ="pro" onclick="window.location.href='itemDetails.php'">
 				<img src="images/bodywash1.png" alt="">
 				<div class= "des">
 					<span>Watsis</span>
@@ -153,5 +153,6 @@
 		<button>Explore more</button>
 	</section>
 
+	<!--Footer-->
 </body>
 </html>
