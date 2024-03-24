@@ -45,6 +45,26 @@ CREATE TABLE IF NOT EXISTS users(
 
 --Insert value
 INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Jo Malone Lime Basil & Mandarin Body & Hand Wash', 'Body Care', 'Elevate your daily routine with indulgent Lime Basil & Mandarin Body & Hand Wash. With naturally derived glycerine and meadowfoam seed oil, the formula transforms into a velvety foam, and cleanses and softens skin. Leave skin scented with this tantalising, zesty fragrance.',
+'RM385.00', 'images/bodywash1.png', 'images/bodywash2.png', 'images/bodywash3.png', 'images/bodywash4.png')
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('Chanel N°5 The Bath Soap', 'Body Care', 'In contact with water, the bath soap develops a light, creamy lather that leaves the skin soft and delicately fragranced. A peaceful moment steeped in the magic of N°5. Inspired by the smooth harmony of Rose and Jasmine that composes N°5, the bath soap was formulated as a sensual continuation of the N°5 floral bouquet.',
+'RM 135.00', 'images/bodysoap1.png', 'images/bodysoap2.png', 'images/bodysoap3.png', 'images/bodysoap4.png')
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('The Ritual Of Sakura Body oil', 'Body Care', "Make each day feel like a new beginning with The Ritual of Sakura dry body oil – containing 96% ingredients of natural origin. This fast-absorbing dry oil contains ultra-nourishing rich oils that leave your skin luminous and nourished. If you have dry and sensitive skin, this dry oil works to hydrate and smooth the skin's texture for a radiant appearance. The collection’s signature blend of elegant cherry blossom and creamy rice milk creates a rejuvenating fragrance experience for the senses.",
+'RM125.00', 'images/bodyoil1.png', 'images/bodyoil2.png', 'images/bodyoil3.png', 'images/bodyoil4.png')
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('CLOUD MILK Coconut + Maca Firming Body Cream', 'Body Care', 'A decadent body moisturizer that brings the benefits of herbal ingredients to the entire body. Formulated with eco-certified coconut fruit and maca, this rich yet non-greasy formula absorbs instantly to provide intense moisture and firming benefits to even the driest body skin.',
+'RM 191.95', 'images/bodycream1.png', 'images/bodycream2.png', 'images/bodycream3.png', 'images/bodycream4.png')
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
+VALUES ('INNISFREE Olive Vitamin E Real Lotion', 'Body Care', 'It provides strong moisturizing + nourishment with a soft milky texture containing olive oil and vitamin E. The formula, which meets olive oil with excellent moisturizing power and vitamin E with antioxidant effect, provides strong moisturization and nutrition. The smooth spreading texture quenches the dead skin cells of the skin and treats them with soft and smooth skin texture.',
+'RM 84.00', 'images/bodylotion1.png', 'images/bodylotion2.png', 'images/bodylotion3.png', 'images/bodylotion4.png')
+
+INSERT INTO products (product_name, product_type, product_description, product_price, product_image1, product_image2, product_image3, product_image4)
 VALUES ('Grafen Root Booster Shampoo (500ml)', 'Hair Care', 'Introducing our Anti-Hair Loss Shampoo, meticulously crafted with a perfect pH balance of 5.86 to nourish both hair and scalp without any stickiness. 
 Reflecting user feedback and crafted with care, it is produced by a CGMP certified manufacturer and has passed Subacid Conformity Test. Enriched with genuine ingredients, including 22 kinds of amino acids, 2 types of hair oil, and 2 plant-derived scalp ingredients, along with 6 natural surfactants. Highly recommended for those seeking effective hair loss prevention, thicker hair, and scalp health. Say goodbye to waste and dandruff, and hello to healthier, fuller locks!',
 'RM72.60', 'images/shampoo1.png', 'images/shampoo2.png', 'images/shampoo3.png', 'images/shampoo4.png');

@@ -65,6 +65,17 @@
     left: 0;
     transform: none;
   }
+
+  /*Single product*/
+  #prodetails{
+    display:flex;
+    flex-direction:column;
+  }
+
+  #prodetails .single-pro-image{
+    width:100%;
+    margin-left:0px;
+  }
 }
 /*End Style for header*/
 
@@ -854,6 +865,7 @@ footer {
 	margin: 15px 0;
 	transition: 0.2s ease;
 	position: relative;
+  background-color: white;
 }
 
 #product1 .pro img{
@@ -914,5 +926,109 @@ footer {
   align-items: center;
   text-align: center;
 }
-
 /* End of style of product list */
+
+/* Style of product details */
+#prodetails .single-pro-image{
+  width: 40%;
+  margin-right: 50px;
+}
+
+.small-img-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col{
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#prodetails {
+  display: flex;
+  margin-top: 20px;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h6{
+  font-size:15px;
+  padding: 0;
+  margin:0;
+}
+
+#prodetails .single-pro-details h4{
+  padding: 40px 0 20px 0;
+  margin:0;
+  font-size: 20px;
+}
+
+#prodetails .single-pro-details h2{
+  font-size:26px;
+  padding: 0;
+  margin: 10px;
+}
+
+#prodetails .single-pro-details input{
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details span{
+  line-height: 25px;
+}
+
+#prodetails .single-pro-details .prod_quantity {
+
+  width: 150px;
+}
+
+#prodetails .single-pro-details .prod_quantity .quantity button {
+  width: 30px;
+  height: 30px;
+}
+
+
+#prodetails .single-pro-details .prod_quantity .quantity input {
+  width: 60px;
+  height: 30px;
+  padding: 0; 
+}
+
+#prodetails .single-pro-details .prod_quantity .quantity button,
+#prodetails .single-pro-details .prod_quantity .quantity input {
+  margin: 0; 
+}
+
+#prodetails .single-pro-details .addcart{
+  background:#088178;
+  color: #fff;
+  height: 35px;
+  width: 130px;
+  margin:10px;
+}
+
+/* Responsive Single product (for mobile devices) */
+@media screen and (max-width: 600px) {
+
+  #prodetails{
+    display:flex;
+    flex-direction:column;
+  }
+
+  #prodetails .single-pro-image{
+    width:100%;
+    margin-left:0px;
+  }
+
+  #prodetails .single-pro-details{
+    width:100%;
+  }
+}
+
