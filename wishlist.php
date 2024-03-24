@@ -23,8 +23,8 @@
                         <img src="images/hairoil1.png" alt="product image">
                     </div>
                     <div class="content">
-                        <h3>Shiseido Macherie Hair Oil 60ml</h3>
-                        <p>RM 69.00</p>
+                        <p class = prod_name>Shiseido Macherie Hair Oil 60ml</p>
+                        <p class = prod_price>RM 69.00</p>
                     </div>
                 </div>
                 <div class="btn">
@@ -40,8 +40,8 @@
                         <img src="images/hairoil1.png" alt="product image">
                     </div>
                     <div class="content">
-                        <h3>Shiseido Macherie Hair Oil 60ml</h3>
-                        <p>RM 69.00</p>
+                        <p class = prod_name>Shiseido Macherie Hair Oil 60ml</p>
+                        <p class = prod_price>RM 69.00</p>
                     </div>
                 </div>
                 <div class="btn">
@@ -57,8 +57,8 @@
                         <img src="images/hairoil1.png" alt="product image">
                     </div>
                     <div class="content">
-                        <h3>Shiseido Macherie Hair Oil 60ml</h3>
-                        <p>RM 69.00</p>
+                        <p class = prod_name>Shiseido Macherie Hair Oil 60ml</p>
+                        <p class = prod_price>RM 69.00</p>
                     </div>
                 </div>
                 <div class="btn">
@@ -74,8 +74,8 @@
                         <img src="images/hairoil1.png" alt="product image">
                     </div>
                     <div class="content">
-                        <h3>Shiseido Macherie Hair Oil 60ml</h3>
-                        <p>RM 69.00</p>
+                        <p class = prod_name>Shiseido Macherie Hair Oil 60ml</p>
+                        <p class = prod_price>RM 69.00</p>
                     </div>
                 </div>
                 <div class="btn">
