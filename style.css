@@ -249,14 +249,12 @@ body {
 }
 
 .cart .box_container{
-    display: inline-flex;
-    gap: 30px;
+    display: flex;
 }
 
 .cart .box_container .prod_box{
-    
+    flex: 5;
     position: relative;
-    width: 100%;
     margin-right: 20px;
 }
 
@@ -325,12 +323,11 @@ body {
 }
 
 .cart .box_container .checkout_box{
-    position: absolute;
-    right: 0;
+    flex: 1;
+    position: relative;
     margin: 20px;
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
-    width: 200px;
 }
 
 .cart .box_container .checkout_box .order_summary{
@@ -381,7 +378,7 @@ body {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1070px){
   .cart .box_container {
     flex-direction: column; /* Change to column layout */
   }
@@ -400,7 +397,7 @@ body {
   }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 790px){
   .cart .heading{
     font-size: 25px;
     padding: 40px;
@@ -454,11 +451,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 20px 120px;
+    padding: 20px 140px;
+    align-items: flex-start;
 }
 
 .wishlist .box_container .box{
-    flex: 1 1 380px;
+    flex: 1 1 calc(50% - 15px); /* Each box takes 50% width with gap in between */
+    max-width: calc(50% - 15px); /* Set a maximum width for the boxes */
+    box-sizing: border-box; /* Include padding and border in the width */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
@@ -466,6 +466,7 @@ body {
     text-align: center;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
+    padding: 20px 10px;
 }
 
 .wishlist .box_container .box .product .stock_status{
@@ -476,7 +477,7 @@ body {
     background-color: rgb(102, 152, 131);
     font-size: 15px;
     padding: 5px;
-    z-index: 1;
+    z-index: 0.5;
 }
 
 .wishlist .box_container .box .product .image{
@@ -486,8 +487,8 @@ body {
 }
 
 .wishlist .box_container .box .product .image img{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .wishlist .box_container .box .product:hover .image img{
@@ -500,8 +501,10 @@ body {
     position: relative;
 }
 
-.wishlist .box_container .box .product .content h3{
-  margin: 0;
+.wishlist .box_container .box .product .content .prod_name{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 .wishlist .box_container .box .btn{
@@ -535,9 +538,9 @@ body {
     color:rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1200px){
   .wishlist .box_container {
-    padding: 20px 10px; /* Adjust padding for smaller screens */
+    padding: 20px 120px; /* Adjust padding for smaller screens */
   }
 
   .wishlist .box_container .box {
@@ -550,23 +553,29 @@ body {
     height: 200px;
   }
 
-  .wishlist .box_container .box .product .content h3{
+  .wishlist .box_container .box .product .content .prod_name{
     font-size: 16px;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 950px){
   .wishlist .box_container {
-    padding: 20px 0px; /* Adjust padding for smaller screens */
+    padding: 20px 80px; /* Adjust padding for smaller screens */
     
   }
 
   .wishlist .box_container .box {
     position: relative;
     display:block;
-    flex-basis: 80%; /* Set each box to take up full width */
-    max-width: 80%;
+    flex-basis: calc(100% - 15px); /* Each box takes 100% width with gap in between on smaller screens */
+    max-width: calc(100% - 15px); /* Set a maximum width for the boxes on smaller screens */
     margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .wishlist .box_container{
+    padding: 20px 20px;
   }
 }
 
