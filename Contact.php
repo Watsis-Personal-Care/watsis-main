@@ -7,11 +7,51 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<!-- Top navigation -->
+    <header class="topnav">
+      <!-- Centered link -->
+      <div class="topnav-centered">
+        <a href="picture"><img src="images/watsis_personal_care.png" class="logo" alt="Watsis Personal Care Logo"></a>
+      </div>
+      
+      <!-- Left-aligned links (default) -->
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()">
+        <div class="barscontainer" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+      
+      <!-- Right-aligned links -->
+      <div class="topnav-right">
+        <a href="">Contact Us</a>
+        <a href="">Sign In</a>
+        <a href="">wishlist</a>
+        <a href="">cart</a>
+      </div>
+    </header>
+
+    <!--Side navigation menu content-->
+    <div class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="">Skin Care</a>
+      <a href="">Hair Care</a>
+      <a href="">Body Care</a>
+      <a href="">Dental Care</a>
+      <a href="">Promotion</a>
+    </div>
+	/*here*/
 	<section class="contact">
 		<div class="content">
-			<h2>Contact Us</h2>
-			<p>Watsis here,wat to write help me think think thank you very much.
-			</p>
+			<h2><b>Contact Us</b></h2>
+				<h3><b>Ask us a question!</b></h3>
+				<p>Watsis here,if you need to stay in contact with us, have doubts on your purchase and registration,
+				please do not hesitate to contact us.
+				</p>
+				<p>Please feel free to fill in the form at the right bottom of the page, we will get in touch with you within 5 working days.
+				We believe in providing the best cusotmers' satisfaction to you.</p>
 		</div>
 		<div class="container">
 			<div class="contactInfo">
@@ -57,10 +97,13 @@
 						</select>
 						
 						<label for="subject"><b>Subject</b></label>
-						<textarea id="subject" name="subject" placeholder="Write something.." style="height:180px"></textarea>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
 						
-						<button type="submit" class="btn">Submit</button>
-						<button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+						
+						<div class="feedbackFormButton">
+							<button type="submit" class="btn">Submit</button>
+							<button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+						</div>
 					</form>
 				</div>
 				<script>
