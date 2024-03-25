@@ -43,15 +43,15 @@ function scrollToTop() {
     });
 }
 
-//Function to increase product quantity
-function increment() {
-  var quantity = document.getElementById('quantity');
+// Function to increase product quantity
+function increment(productId) {
+  var quantity = document.getElementById('quantity_' + productId);
   quantity.value = parseInt(quantity.value) + 1;
 }
 
-//Function to decrease product quantity
-function decrement() {
-  var quantity = document.getElementById('quantity');
+// Function to decrease product quantity
+function decrement(productId) {
+  var quantity = document.getElementById('quantity_' + productId);
   if (parseInt(quantity.value) > 1) {
     quantity.value = parseInt(quantity.value) - 1;
   }

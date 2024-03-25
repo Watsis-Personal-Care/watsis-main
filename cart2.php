@@ -5,6 +5,7 @@ if(isset($_POST['addcart'])){
 
     //if user has added product to cart before
     if(isset($_SESSION['cart'])){
+
         //get all product id that have been added to cart
         $products_array_ids = array_column($_SESSION['cart'], "product_id");
         //if product that user want to add to cart has not been added to cart before
@@ -24,9 +25,9 @@ if(isset($_POST['addcart'])){
 
         //if product has been added to cart before
         }else{
-            echo '<script> alert("Product was added to cart before!"); </script>';
+            echo '<script> alert("Product was added to cart before!") </script>';
         }
-
+        // if user first time add to cart
     }else{
 
         $product_id = $_POST['product_id'];
@@ -47,10 +48,52 @@ if(isset($_POST['addcart'])){
 
     }
 
+    //calculate total
+    calculateTotalCart();
+
+}else if(isset($_POST['remove_product'])){
+
+    $product_id = $_POST['product_id'];
+    unset($_SESSION['cart'][$product_id]);
+
+    //calculate total
+    calculateTotalCart();
+
+}else if(isset($_POST['update_qty'])){
+
+    //get id and quantity from the form
+    $product_id = $_POST['product_id'];
+    $product_qty = $_POST['product_qty'];
+
+    //get product array from the session
+    $product_array = $_SESSION['cart'][$product_id];
+
+    //update product quantity
+    $product_array['product_quantity'] = $product_qty;
+
+    //return array back to the session
+    $_SESSION['cart'][$product_id] = $product_array;
+
+    //calculate total
+    calculateTotalCart();
+
 }else{
-    header('location: index.php');
+    //header('location: index.php');
 }
 
+function calculateTotalCart(){
+
+    $total=0;
+
+    foreach($_SESSION['cart'] as $key => $value){
+        $product=$_SESSION['cart'][$key];
+        $price=$product['product_price'];
+        $quantity=$product['product_qty'];
+        $total+=$price*$quantity;
+    }
+
+    $_SESSION['total']=$total;
+}
 
 ?>
 
@@ -75,14 +118,19 @@ if(isset($_POST['addcart'])){
 
         <div class="box_container">
             <div class="prod_box">
-            <?php foreach($_SESSION['cart'] as $key => $value){ ?>
                 <div class="cart_prod">
-                    <div class="remove_icon">
-                        <a href="#"><i class="fa-regular fa-trash-can"></i></a>
-                    </div>
+
+                    <?php foreach($_SESSION['cart'] as $key => $value){ ?>
+                    
+                    <form method="POST" action="cart.php">
+                        <input type="hidden" name="product_id" value="<?php echo $value['product_id'];?>"/>
+                        <div class="remove_icon">
+                            <a href="#" type="submit" name="remove_product"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </form>
 
                     <div class="prod_img">
-                        <img src="<?php echo $value['product_image'];?>" />
+                        <img src="<?php echo $value['product_image'];?>" alt="Hair Oil">
                     </div>
 
                     <div class="prod_info">
@@ -94,19 +142,22 @@ if(isset($_POST['addcart'])){
                             <span class="prod_price"><?php echo $value['product_price'];?></span>
                         </div>
                         <div class="prod_quantity">
-                            <button type="button" onclick="decrement(<?php echo $value['product_id'];?>)">-</button>
-                            <input type="text" name="product_qty_<?php echo $value['product_id'];?>" id="quantity_<?php echo $value['product_id'];?>" value="<?php echo $value['product_qty'];?>" min="1">
-                            <button type="button" onclick="increment(<?php echo $value['product_id'];?>)">+</button>
+                            <form method="POST" action="cart.php">
+                                <input type="hidden" name="product_id" value="<?php echo $value['product_id'];?>"/>
+                                <button onclick="decrement()" type="button" name="update_qty">-</button>
+                                <input type="text" name="product_qty" id="quantity" value="<?php echo $value['product_qty'];?>" min="1">
+                                <button onclick="increment()" type="button" name="update_qty">+</button>
+                            </form>
                         </div>
                     </div>
+                    <?php }?>
 
                     <div class="prod_total">
                         <h5>Total</h5>
                         <span>RM</span>
-                        <span class="prod_price">69.00</span>
+                        <span class="prod_price"><?php echo $value['product_qty']*$value['product_price']?></span>
                     </div>
                 </div>
-            <?php } ?>
             </div>
             
             <div class="checkout_box">
@@ -124,7 +175,7 @@ if(isset($_POST['addcart'])){
                 <hr>
                 <div class="total">
                     <span id="title">Total</span>
-                    <span id="amount">RM <span>265.85</span></span>
+                    <span id="amount">RM <span><?php $_SESSION['total'];?></span></span>
                 </div>
                 
 
@@ -146,5 +197,6 @@ if(isset($_POST['addcart'])){
 
     <!--Footer-->
     <?php include('templates/footer.php')?>
+    <script src="script.js"></script>
 </body>
 </html>

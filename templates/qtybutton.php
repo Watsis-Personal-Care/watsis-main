@@ -1,6 +1,6 @@
 <div class="quantity">
   <button onclick="decrement()">-</button>
-  <input type="number" id="quantity" value="1" min="1">
+  <input type="text" id="quantity" value="1" min="1">
   <button onclick="increment()">+</button>
 </div>
 

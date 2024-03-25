@@ -202,34 +202,6 @@ body{
 }
 /* End of Homepage scroller styles*/
 
-/* Style for quantity button */
-.quantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.quantity input {
-    width: 30px;
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 15px;
-    border: 1px solid rgb(154, 152, 152);
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-}
-
-.quantity button {
-    margin: 0;
-    padding: 5px 10px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(231, 247, 240);
-    border: 1px solid rgb(154, 152, 152);
-    font-size: 15px;
-    cursor: pointer;
-}
-/* End of style for quantity button */
-
 /* Style for cart page */
 body {
   background-color: rgb(243, 241, 237);
@@ -301,20 +273,49 @@ body {
     margin: 10px;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_name{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_name{
     grid-row: 1;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_price{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_price{
     grid-row: 2;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_quantity{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity{
     grid-row: 3;
     justify-self: left;
     margin: 0;
     padding: 0;
 }
+
+/* Style for quantity button */
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity input {
+  width: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid rgb(154, 152, 152);
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  width: 15px;
+}
+
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity button {
+  margin: 0;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 247, 240);
+  border: 1px solid rgb(154, 152, 152);
+  font-size: 15px;
+  cursor: pointer;
+}
+/* End of style for quantity button */
 
 .cart .box_container .prod_box .cart_prod .prod_total{
     grid-column: 4;
@@ -425,7 +426,7 @@ body {
     font-size: 12px;
   }
 
-  .quantity input{
+  .cart .box_container .prod_box .cart_prod .quantity input {
     width: 15px;
   }
 
@@ -996,26 +997,35 @@ footer {
 }
 
 #prodetails .single-pro-details .prod_quantity {
-
+  margin-left: 13px;
   width: 150px;
+  display: flex;
 }
 
-#prodetails .single-pro-details .prod_quantity .quantity button {
+#prodetails .single-pro-details .prod_quantity button {
   width: 30px;
   height: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 247, 240);
+  border: 1px solid rgb(154, 152, 152);
+  font-size: 15px;
+  cursor: pointer;
 }
 
-
-#prodetails .single-pro-details .prod_quantity .quantity input {
+#prodetails .single-pro-details .prod_quantity input {
   width: 60px;
-  height: 30px;
-  padding: 0; 
+  height: 28.5px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid rgb(154, 152, 152);
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
 }
 
-#prodetails .single-pro-details .prod_quantity .quantity button,
-#prodetails .single-pro-details .prod_quantity .quantity input {
-  margin: 0; 
-}
 
 #prodetails .single-pro-details .addcart{
   background:#088178;
@@ -1023,6 +1033,7 @@ footer {
   height: 35px;
   width: 130px;
   margin:10px;
+  cursor: pointer;
 }
 
 /* Responsive Single product (for mobile devices) */
