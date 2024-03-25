@@ -9,7 +9,8 @@
 </head>
 <body>
     <!--Nav Bar-->
-
+    <?php include('templates/header.php')?>
+	
    <!--Item Details-->
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
@@ -120,6 +121,7 @@
 	</section>
 
     <!--Footer-->
+    <?php include('templates/footer.php')?>
 
     <script>
         var MainImg= document.getElementById("MainImg");

@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--Nav Bar-->
-
+    <?php include('templates/header.php')?>
     <!--Item List-->
 	<section id="product1" class="section-p1">
 		<h2>Product List</h2>
@@ -154,5 +154,6 @@
 	</section>
 
 	<!--Footer-->
+	<?php include('templates/footer.php')?>
 </body>
 </html>
