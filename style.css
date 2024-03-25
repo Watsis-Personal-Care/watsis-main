@@ -589,9 +589,8 @@ body {
 	min-height: 100vh;
 	padding:50px 100px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
+	text-justify: center;
 }
 
 .contact .content{
@@ -600,8 +599,12 @@ body {
 }
 
 .contact .content h2{
-	font-size:36 px;
+	font-size: 36px;
 	font-weight: 500;
+}
+
+.contact .content h3{
+	font-weight: 400;
 }
 
 .contact .content p{
@@ -618,14 +621,12 @@ body {
 
 .container .contactInfo{
 	width:50%;
-	
 	flex-direction: column;
 }
 
 .container .contactInfo .box{
 	position: relative;
 	padding: 20px 0;
-	
 	justify-content: center;
 	align-items: center;
 }
@@ -633,16 +634,12 @@ body {
 .container .contactInfo .box .icon{
 	min-width: 60px;
 	height: 60px;
-	
 	display: flex;
-	
-	
-	font-size: 22px;
+	font-size: 30px;
 }
 
 .container .contactInfo .box .text{
 	display: flex;
-	/*margin-left:20px;*/
 	font-size: 16px;
 	color: black;
 	flex-direction: column;
@@ -663,10 +660,11 @@ body {
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  
+  z-index:80;
   bottom: 20px;
   right: 28px;
   width: 280px;
+  
 }
 
 /* The popup form - hidden by default */
@@ -675,7 +673,7 @@ body {
 	position: fixed;
 	bottom: 0;
     border: 3px solid #f1f1f1;
-	z-index: 9;
+	z-index: 90;
 	right: 28px;
 }
 
@@ -712,9 +710,18 @@ body {
   background: #f1f1f1;
 }
 
+
+.feedbackFormButton {
+	float:center;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;	
+}
+
 /* Set a style for the submit button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background: radial-gradient(circle at center, #04AA6D, #ffffff);
   color: white;
   padding: 16px 15px;
   border: none;
@@ -722,11 +729,15 @@ body {
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
+  flex: 1;
+  margin: 0 5px;
+  border-radius: 50px;
+  text-align: center;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background: radial-gradient(circle at center, red, #ffffff);
 }
 
 /* Add some hover effects to buttons */
