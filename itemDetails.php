@@ -1,3 +1,26 @@
+<?php
+
+	include('server/connection.php');
+
+	if (isset($_GET['product_id'])){
+
+		$product_id= $_GET['product_id'];
+
+		$stmt= $conn->prepare("SELECT * FROM products WHERE product_id= ?");
+		$stmt->bind_param("i",$product_id);
+
+		$stmt->execute();
+
+		$product= $stmt->get_result();
+
+
+		//no product id was given
+	}else{
+		header('location: index.php');
+	}
+
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,44 +33,45 @@
 <body>
     <!--Nav Bar-->
     <?php include('templates/header.php')?>
-	
+
    <!--Item Details-->
     <section id="prodetails" class="section-p1">
+		<?php while($row = $product->fetch_assoc()){ ?>
         <div class="single-pro-image">
-            <img src="images/bodywash1.png" width="100%" id="MainImg" alt="">
+            <img src="<?php echo $row['product_image1']; ?>" width="100%" id="MainImg" alt="">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="images/bodywash1.png" width="100%" class="small-img" alt="">
+                    <img src="<?php echo $row['product_image1']; ?>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/bodywash2.png" width="100%" class="small-img" alt="">
+                    <img src="<?php echo $row['product_image2']; ?>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/bodywash3.png" width="100%" class="small-img" alt="">
+                    <img src="<?php echo $row['product_image3']; ?>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/bodywash4.png" width="100%" class="small-img" alt="">
+                    <img src="<?php echo $row['product_image4']; ?>" width="100%" class="small-img" alt="">
                 </div>
             </div>
         </div>
 
         <div class= "single-pro-details">
-            <h6>Home/ Body Care</h6>
-            <h4>Jo Malone Lime Basil & Mandarin Body & Hand Wash</h4>
-            <h2>RM385.00</h2>
+            <h6>Home/ <?php echo $row['product_type']; ?></h6>
+            <h4><?php echo $row['product_name']; ?></h4>
+            <h2>RM<?php echo $row['product_price']; ?></h2>
             <div class="prod_quantity"> 
                 <?php include('templates/qtybutton.php'); ?>
             </div>
             <button class="addcart">Add to Cart</button>
             <h4>Product Details</h4>
-            <span>Elevate your daily routine with indulgent Lime Basil & Mandarin Body & Hand Wash. 
-            With naturally derived glycerine and meadowfoam seed oil, the formula transforms into a velvety foam, 
-            and cleanses and softens skin. Leave skin scented with this tantalising, zesty fragrance. </span>
+            <span><?php echo $row['product_description']; ?> </span>
 
         </div>
+		<?php } ?>
     </section>
 
+	<!--Related products-->
     <section id="product1" class="section-p1">
 		<h2>Featured Products</h2>
 		<p>Personal Care</p>
