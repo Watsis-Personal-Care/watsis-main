@@ -42,3 +42,17 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
+//Function to increase product quantity
+function increment() {
+  var quantity = document.getElementById('quantity');
+  quantity.value = parseInt(quantity.value) + 1;
+}
+
+//Function to decrease product quantity
+function decrement() {
+  var quantity = document.getElementById('quantity');
+  if (parseInt(quantity.value) > 1) {
+    quantity.value = parseInt(quantity.value) - 1;
+  }
+}
