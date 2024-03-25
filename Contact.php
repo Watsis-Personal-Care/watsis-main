@@ -1,17 +1,26 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us Page</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<!--Nav Bar-->
+    <?php include('templates/header.php')?>
+	
 	<section class="contact">
 		<div class="content">
-			<h2>Contact Us</h2>
-			<p>Watsis here,wat to write help me think think thank you very much.
-			</p>
+			<h2><b>Contact Us</b></h2>
+				<h3><b>Ask us a question!</b></h3>
+				<p>Watsis here,if you need to stay in contact with us, have doubts on your purchase and registration,
+				please do not hesitate to contact us.
+				</p>
+				<p>Please feel free to fill in the form at the right bottom of the page, we will get in touch with you within 5 working days.
+				We believe in providing the best cusotmers' satisfaction to you.</p>
 		</div>
 		<div class="container">
 			<div class="contactInfo">
@@ -57,10 +66,13 @@
 						</select>
 						
 						<label for="subject"><b>Subject</b></label>
-						<textarea id="subject" name="subject" placeholder="Write something.." style="height:180px"></textarea>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
 						
-						<button type="submit" class="btn">Submit</button>
-						<button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+						
+						<div class="feedbackFormButton">
+							<button type="submit" class="btn">Submit</button>
+							<button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+						</div>
 					</form>
 				</div>
 				<script>
@@ -75,5 +87,7 @@
 			</div>
 		</div>
 	</section>
+	<!--Footer-->
+	<?php include('templates/footer.php')?>
 </body>
 </html>
