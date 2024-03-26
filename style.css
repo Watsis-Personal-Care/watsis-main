@@ -199,6 +199,21 @@ body{
 .image-container:hover .overlay-homepage-img {
   opacity: 1;
 }
+
+.homepage-discovermore  {
+  text-align: center; 
+  margin-bottom: 50px;
+  text-decoration: underline; 
+  font-size: 35px;
+}
+
+.homepage-discovermore a {
+  color:black;
+}
+
+.homepage-discovermore a:hover {
+  color:grey;
+}
 /* End of Homepage scroller styles*/
 
 /* Style for cart page */
