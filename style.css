@@ -743,7 +743,7 @@ body {
 }
 
 .form-container input[type=text], select, textarea {
-  width: 100%;
+  width: 92%;
   padding: 10px;
   border:none;
   margin-top: 5px;
