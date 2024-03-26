@@ -11,7 +11,7 @@
     <header class="topnav">
       <!-- Centered link -->
       <div class="topnav-centered">
-        <a href="index.html"><img src="images/watsis_personal_care.png" class="logo"></a>
+        <a href="index.php"><img src="images/watsis_personal_care.png" class="logo"></a>
       </div>
       
       <!-- Left-aligned links (default) -->
@@ -28,7 +28,7 @@
       <div class="topnav-right">
         <a href="">Contact Us</a>
         <a href="">Sign In</a>
-        <a href="">wishlist</a>
+        <a href="wishlist.php">wishlist</a>
         <a href="cart.php">cart</a>
       </div>
     </header>

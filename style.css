@@ -485,6 +485,7 @@ body {
     gap: 15px;
     padding: 20px 140px;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .wishlist .box_container .box{
@@ -498,7 +499,13 @@ body {
     text-align: center;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
+    padding: 10px 12px;
+    width: 10%;
+    min-width:250px;
+    cursor: pointer;
+    margin: 15px 0;
+	  transition: 0.2s ease;
 }
 
 .wishlist .box_container .box .product .stock_status{
@@ -545,6 +552,7 @@ body {
     left: 0;
     right: 0;
     display: flex;
+    justify-content:center;
 }
 
 /* When user hovers the mouse over the product, the remove and addcart button will appear */
@@ -552,20 +560,22 @@ body {
     bottom:0;
 }
 
-.wishlist .box_container .box .btn a{
+.wishlist .box_container .box .btn .button{
+    width: 100%;
     font-size: 20px;
     padding: 10px;
     text-decoration: none;
-    display: inline-block;
-    width: 100%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 
-.wishlist .box_container .box .btn .addcartbtn{
+.wishlist .box_container .box .btn #addcartbtn{
     background-color:rgb(231, 247, 240);
     color:rgb(0, 0, 0);
 }
 
-.wishlist .box_container .box .btn .removebtn{
+.wishlist .box_container .box .btn #removebtn{
     background-color:rgb(194, 202, 199);
     color:rgb(0, 0, 0);
 }
