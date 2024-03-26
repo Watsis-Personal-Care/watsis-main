@@ -89,8 +89,6 @@ if(isset($_POST['addcart'])){
     // Calculate total
     calculateTotalCart();
 
-}else{
-    //header('location: itemList.php');
 }
 
 function calculateTotalCart(){
@@ -128,6 +126,7 @@ function calculateTotalCart(){
         </div>
 
         <div class="box_container">
+            <?php if (!empty($_SESSION['cart'])) { ?>
             <div class="prod_box">
             <?php foreach($_SESSION['cart'] as $key => $value){ ?>
                 <div class="cart_prod">
@@ -201,6 +200,12 @@ function calculateTotalCart(){
                     <button>Checkout</button>
                 </div>
             </div>
+            <?php } else { ?>
+            <div class="empty_cart_message">
+                <p>Your cart is empty.</p>
+                <p>Browse more <a href="itemList.php">Watsis products</a> and add to cart now!</p>
+            </div>
+            <?php } ?>
         </div>
 
     </section>

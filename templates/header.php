@@ -29,7 +29,7 @@
         <a href="">Contact Us</a>
         <a href="">Sign In</a>
         <a href="">wishlist</a>
-        <a href="">cart</a>
+        <a href="cart.php">cart</a>
       </div>
     </header>
 

@@ -375,6 +375,28 @@ body {
     cursor: pointer;
 }
 
+.cart .box_container .empty_cart_message {
+  text-align: left;
+  margin-left: 50px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cart .box_container .empty_cart_message p {
+  margin: 10px 0;
+}
+
+.cart .box_container .empty_cart_message a {
+  color: rgb(57, 146, 110);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cart .box_container .empty_cart_message a:hover {
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 1070px){
   .cart .box_container {
     flex-direction: column; /* Change to column layout */
