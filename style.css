@@ -244,13 +244,15 @@ body {
     grid-column: 1;
 }
 
-.cart .box_container .prod_box .cart_prod .remove_icon a{
+.cart .box_container .prod_box .cart_prod .remove_icon button{
     padding: 5px 10px;
     cursor: pointer;
     color:rgb(0, 0, 0);
+    background: none;
+    border: none;
 }
 
-.cart .box_container .prod_box .cart_prod .remove_icon a:hover{
+.cart .box_container .prod_box .cart_prod .remove_icon:hover button{
     color:rgb(57, 146, 110);
 }
 
@@ -286,13 +288,7 @@ body {
     justify-self: left;
     margin: 0;
     padding: 0;
-}
-
-/* Style for quantity button */
-.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
 }
 
 .cart .box_container .prod_box .cart_prod .prod_info .prod_quantity input {
@@ -378,6 +374,28 @@ body {
     padding: 5px;
     cursor: pointer;
 }
+
+.cart .box_container .empty_cart_message {
+  text-align: left;
+  margin-left: 50px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cart .box_container .empty_cart_message p {
+  margin: 10px 0;
+}
+
+.cart .box_container .empty_cart_message a {
+  color: rgb(57, 146, 110);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cart .box_container .empty_cart_message a:hover {
+  text-decoration: underline;
+}
+
 
 @media screen and (max-width: 1070px){
   .cart .box_container {
