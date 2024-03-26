@@ -12,14 +12,11 @@
 		$stmt->execute();
 
 		$product= $stmt->get_result();
-
-
 		//no product id was given
 	}else{
 		header('location: index.php');
-	}
-
-?>
+	}	
+	?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +36,6 @@
     <section id="prodetails" class="section-p1">
 		<?php while($row = $product->fetch_assoc()){ ?>
 
-		
 			<div class="single-pro-image">
 				<img src="<?php echo $row['product_image1']; ?>" width="100%" id="MainImg" alt="">
 				<div class="small-img-group">
@@ -98,73 +94,32 @@
     <section id="product1" class="section-p1">
 		<h2>Featured Products</h2>
 		<p>Personal Care</p>
-		<div class="pro-container">
-			<div class ="pro">
-				<img src="images/bodywash1.png" alt="">
-				<div class= "des">
-					<span>Watsis</span>
-					<h5>Jo Malone Lime Basil & Mandarin Body & Hand Wash</h5>
-					<div class="star">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<h4>RM385.00</h4>
-				</div>
-				<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-			</div>
-			<div class ="pro">
-				<img src="images/soap1.png" alt="">
-				<div class= "des">
-					<span>Watsis</span>
-					<h5>Chanel N°5 The Bath Soap</h5>
-					<div class="star">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<h4>RM135.00</h4>
-				</div>
-				<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-			</div>
-			<div class ="pro">
-				<img src="images/bodyoil1.png" alt="">
-				<div class= "des">
-					<span>Watsis</span>
-					<h5>The Ritual Of Sakura Body oil</h5>
-					<div class="star">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<h4>RM125.00</h4>
-				</div>
-				<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-			</div>
-			<div class ="pro">
-				<img src="images/bodycream1.png" alt="">
-				<div class= "des">
-					<span>Watsis</span>
-					<h5>CLOUD MILK Coconut + Maca Firming Body Cream</h5>
-					<div class="star">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<h4>RM191.95</h4>
-				</div>
-				<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-			</div>
+			<div class="pro-container">
+			<?php include('server/get_featured_products.php');?>
 
+			<?php while($row = $featured_products->fetch_assoc()){ ?>
+
+					<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
+						<img src="<?php echo $row['product_image1']; ?>" alt="">
+						<div class= "des">
+							<span>Watsis</span>
+							<h5><?php echo $row['product_name']; ?></h5>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+							<h4>RM<?php echo $row['product_price']; ?></h4>
+						</div>
+						<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+					</div>
+				<?php } ?>		
+			</div>
 		</div>
+	
+				
 	</section>
 
     <!--Footer-->
