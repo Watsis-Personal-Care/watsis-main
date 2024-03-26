@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 26, 2024 at 01:54 PM
+-- Generation Time: Mar 25, 2024 at 11:36 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `dbwatsis`
 --
-CREATE DATABASE IF NOT EXISTS `dbwatsis` DEFAULT CHARACTER SET utf32 COLLATE utf32_general_ci;
-USE `dbwatsis`;
 
 -- --------------------------------------------------------
 
