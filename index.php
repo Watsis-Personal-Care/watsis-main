@@ -41,6 +41,9 @@
                     <a href=""><img src="images\toothpaste1.png" alt="toothpaste"><div class="overlay-homepage-img">Acne Serum</div></a>
                 </div> 
             </div>
+            <div class="homepage-discovermore">
+                <a href="">Discover More</a>
+            </div>
         </div>
         <?php include('templates\footer.php') ?>
     </body>
