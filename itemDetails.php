@@ -19,7 +19,7 @@
 		header('location: index.php');
 	}
 
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@
     <title>Item Details</title>
     <link rel="stylesheet" href="style.css">
 	<script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 </head>
 <body>
     <!--Nav Bar-->
@@ -37,33 +38,44 @@
    <!--Item Details-->
     <section id="prodetails" class="section-p1">
 		<?php while($row = $product->fetch_assoc()){ ?>
-        <div class="single-pro-image">
-            <img src="<?php echo $row['product_image1']; ?>" width="100%" id="MainImg" alt="">
 
-            <div class="small-img-group">
-                <div class="small-img-col">
-                    <img src="<?php echo $row['product_image1']; ?>" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="<?php echo $row['product_image2']; ?>" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="<?php echo $row['product_image3']; ?>" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="<?php echo $row['product_image4']; ?>" width="100%" class="small-img" alt="">
-                </div>
-            </div>
-        </div>
+		
+			<div class="single-pro-image">
+				<img src="<?php echo $row['product_image1']; ?>" width="100%" id="MainImg" alt="">
+				<div class="small-img-group">
+					<div class="small-img-col">
+						<img src="<?php echo $row['product_image1']; ?>" width="100%" class="small-img" alt="">
+					</div>
+					<div class="small-img-col">
+						<img src="<?php echo $row['product_image2']; ?>" width="100%" class="small-img" alt="">
+					</div>
+					<div class="small-img-col">
+						<img src="<?php echo $row['product_image3']; ?>" width="100%" class="small-img" alt="">
+					</div>
+					<div class="small-img-col">
+						<img src="<?php echo $row['product_image4']; ?>" width="100%" class="small-img" alt="">
+					</div>
+				</div>
+			</div>
+        
 
         <div class= "single-pro-details">
             <h6>Home/ <?php echo $row['product_type']; ?></h6>
             <h4><?php echo $row['product_name']; ?></h4>
             <h2>RM<?php echo $row['product_price']; ?></h2>
-            <div class="prod_quantity"> 
-                <?php include('templates/qtybutton.php'); ?>
-            </div>
-            <button class="addcart">Add to Cart</button>
+			
+			<form method="POST" action="cart.php">
+				<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
+				<input type="hidden" name="product_image" value="<?php echo $row['product_image1']; ?>"/>
+				<input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>"/>
+				<input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>"/>
+				<div class="prod_quantity">
+					<button type="button" onclick="decrement(<?php echo $row['product_id']; ?>)">-</button>
+					<input type="text" name='product_qty' id="quantity_<?php echo $row['product_id']; ?>" value="1" min="1">
+					<button type="button" onclick="increment(<?php echo $row['product_id']; ?>)">+</button>
+				</div>
+            	<button class="addcart" type="submit" name="addcart">Add to Cart</button>
+			</form>
             <h4>Product Details</h4>
             <span><?php echo $row['product_description']; ?> </span>
 
@@ -164,7 +176,7 @@
             MainImg.src= smallimg[3].src;
         }
     
-    </script> 
+    </script>
 
 </body>
 </html>

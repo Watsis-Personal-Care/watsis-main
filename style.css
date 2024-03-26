@@ -3,7 +3,6 @@
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   background-color: #ffffff;
-  padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   width: 100%;
@@ -109,7 +108,7 @@
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sidenav p, .sidenav a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 30px;
@@ -152,12 +151,11 @@ body{
   margin-top: 300px;
   margin-left: 20px;
   font-size: 40px;
-  text-decoration: underline;
 }
 
 .homepage-scroll-container {
   background-color: rgb(243, 241, 237);
-  margin: 0px 20px 100px;
+  margin: 0px 20px;
   overflow: auto;
   white-space: nowrap;
   position: relative;
@@ -200,35 +198,22 @@ body{
 .image-container:hover .overlay-homepage-img {
   opacity: 1;
 }
+
+.homepage-discovermore  {
+  text-align: center; 
+  margin-bottom: 50px;
+  text-decoration: underline; 
+  font-size: 35px;
+}
+
+.homepage-discovermore a {
+  color:black;
+}
+
+.homepage-discovermore a:hover {
+  color:grey;
+}
 /* End of Homepage scroller styles*/
-
-/* Style for quantity button */
-.quantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.quantity input {
-    width: 30px;
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 15px;
-    border: 1px solid rgb(154, 152, 152);
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-}
-
-.quantity button {
-    margin: 0;
-    padding: 5px 10px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(231, 247, 240);
-    border: 1px solid rgb(154, 152, 152);
-    font-size: 15px;
-    cursor: pointer;
-}
-/* End of style for quantity button */
 
 /* Style for cart page */
 body {
@@ -272,13 +257,15 @@ body {
     grid-column: 1;
 }
 
-.cart .box_container .prod_box .cart_prod .remove_icon a{
+.cart .box_container .prod_box .cart_prod .remove_icon button{
     padding: 5px 10px;
     cursor: pointer;
     color:rgb(0, 0, 0);
+    background: none;
+    border: none;
 }
 
-.cart .box_container .prod_box .cart_prod .remove_icon a:hover{
+.cart .box_container .prod_box .cart_prod .remove_icon:hover button{
     color:rgb(57, 146, 110);
 }
 
@@ -301,20 +288,43 @@ body {
     margin: 10px;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_name{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_name{
     grid-row: 1;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_price{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_price{
     grid-row: 2;
 }
 
-.cart .box_container .prod_box .cart_prod .prod_quantity{
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity{
     grid-row: 3;
     justify-self: left;
     margin: 0;
     padding: 0;
+    display: flex;
 }
+
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity input {
+  width: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid rgb(154, 152, 152);
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  width: 15px;
+}
+
+.cart .box_container .prod_box .cart_prod .prod_info .prod_quantity button {
+  margin: 0;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 247, 240);
+  border: 1px solid rgb(154, 152, 152);
+  font-size: 15px;
+  cursor: pointer;
+}
+/* End of style for quantity button */
 
 .cart .box_container .prod_box .cart_prod .prod_total{
     grid-column: 4;
@@ -378,6 +388,28 @@ body {
     cursor: pointer;
 }
 
+.cart .box_container .empty_cart_message {
+  text-align: left;
+  margin-left: 50px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cart .box_container .empty_cart_message p {
+  margin: 10px 0;
+}
+
+.cart .box_container .empty_cart_message a {
+  color: rgb(57, 146, 110);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cart .box_container .empty_cart_message a:hover {
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 1070px){
   .cart .box_container {
     flex-direction: column; /* Change to column layout */
@@ -425,7 +457,7 @@ body {
     font-size: 12px;
   }
 
-  .quantity input{
+  .cart .box_container .prod_box .cart_prod .quantity input {
     width: 15px;
   }
 
@@ -598,14 +630,12 @@ body {
 }
 
 .contact .content h2{
-	font-size: 40px;
-	font-weight: 400;
-	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
 }
 
 .contact .content h3{
 	font-weight: 400;
-	text-align: left;
 }
 
 .contact .content p{
@@ -623,14 +653,12 @@ body {
 
 .container .contactInfo{
 	width:50%;
-	
 	flex-direction: column;
 }
 
 .container .contactInfo .box{
 	position: relative;
 	padding: 20px 0;
-	
 	justify-content: center;
 	align-items: center;
 }
@@ -638,16 +666,12 @@ body {
 .container .contactInfo .box .icon{
 	min-width: 60px;
 	height: 60px;
-	
 	display: flex;
-	
-	
-	font-size: 22px;
+	font-size: 30px;
 }
 
 .container .contactInfo .box .text{
 	display: flex;
-	/*margin-left:20px;*/
 	font-size: 16px;
 	color: black;
 	flex-direction: column;
@@ -668,7 +692,7 @@ body {
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  
+  z-index:80;
   bottom: 20px;
   right: 28px;
   width: 280px;
@@ -681,8 +705,8 @@ body {
 	position: fixed;
 	bottom: 0;
     border: 3px solid #f1f1f1;
-	z-index: 9;
-	right: 0;
+	z-index: 90;
+	right: 28px;
 }
 
 /* Add styles to the form container */
@@ -1015,26 +1039,35 @@ footer {
 }
 
 #prodetails .single-pro-details .prod_quantity {
-
+  margin-left: 13px;
   width: 150px;
+  display: flex;
 }
 
-#prodetails .single-pro-details .prod_quantity .quantity button {
+#prodetails .single-pro-details .prod_quantity button {
   width: 30px;
   height: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 247, 240);
+  border: 1px solid rgb(154, 152, 152);
+  font-size: 15px;
+  cursor: pointer;
 }
 
-
-#prodetails .single-pro-details .prod_quantity .quantity input {
+#prodetails .single-pro-details .prod_quantity input {
   width: 60px;
-  height: 30px;
-  padding: 0; 
+  height: 28.5px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid rgb(154, 152, 152);
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
 }
 
-#prodetails .single-pro-details .prod_quantity .quantity button,
-#prodetails .single-pro-details .prod_quantity .quantity input {
-  margin: 0; 
-}
 
 #prodetails .single-pro-details .addcart{
   background:#088178;
@@ -1042,6 +1075,7 @@ footer {
   height: 35px;
   width: 130px;
   margin:10px;
+  cursor: pointer;
 }
 
 /* Responsive Single product (for mobile devices) */

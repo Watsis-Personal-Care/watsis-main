@@ -29,13 +29,15 @@
         <a href="">Contact Us</a>
         <a href="">Sign In</a>
         <a href="">wishlist</a>
-        <a href="">cart</a>
+        <a href="cart.php">cart</a>
       </div>
     </header>
 
     <!--Side navigation menu content-->
     <div class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <p style="text-decoration:underline">Categories: </p>
+      <a href="">All Products</a>
       <a href="">Skin Care</a>
       <a href="">Hair Care</a>
       <a href="">Body Care</a>
