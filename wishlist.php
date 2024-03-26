@@ -73,6 +73,7 @@ if(isset($_POST['addwishlist'])){
         <h2 class="heading">Wishlist</h2>
         
         <div class="box_container">
+        <?php if (!empty($_SESSION['wishlist'])) { ?>
         <?php foreach($_SESSION['wishlist'] as $key => $value){ ?>
             <div class="box">
                 <div class="product">
@@ -101,6 +102,12 @@ if(isset($_POST['addwishlist'])){
                     </form>
                 </div>
 
+            </div>
+        <?php } ?>
+        <?php } else { ?>
+            <div class="empty_wishlist_message">
+                <p>Your wishlist is empty.</p>
+                <p>Browse more <a href="itemList.php">Watsis products</a> and add to wishlist now!</p>
             </div>
         <?php } ?>
         </div>
