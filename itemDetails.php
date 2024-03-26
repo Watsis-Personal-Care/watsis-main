@@ -76,7 +76,18 @@
 				</div>
             	<button class="addcart" type="submit" name="addcart">Add to Cart</button>
 			</form>
-            <h4>Product Details</h4>
+
+			<form method="POST" action="wishlist.php">
+				<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
+				<input type="hidden" name="product_image" value="<?php echo $row['product_image1']; ?>"/>
+				<input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>"/>
+				<input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>"/>
+				<!--change your wishlist style here-->
+				<button type="submit" name="addwishlist">
+					<i class="fa-solid fa-heart"></i>
+				</button>
+			</form>
+			<h4>Product Details</h4>
             <span><?php echo $row['product_description']; ?> </span>
 
         </div>
