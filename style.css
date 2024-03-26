@@ -3,7 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   background-color: #ffffff;
-	padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+  padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   width: 100%;
