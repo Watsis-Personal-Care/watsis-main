@@ -694,7 +694,7 @@ body {
   position: fixed;
   z-index:80;
   bottom: 20px;
-  right: 28px;
+  right: 35px;
   width: 280px;
   
 }
@@ -704,9 +704,9 @@ body {
 	display: none;
 	position: fixed;
 	bottom: 0;
-    border: 3px solid #f1f1f1;
+    	border: 3px solid #f1f1f1;
 	z-index: 90;
-	right: 28px;
+	right: 35px;
 }
 
 /* Add styles to the form container */
@@ -719,8 +719,8 @@ body {
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
+  width: 70%;
+  padding: 10px;
   margin: 5px 0 12px 0;
   border: none;
   background: #f1f1f1;
@@ -734,10 +734,10 @@ body {
 
 .form-container input[type=text], select, textarea {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   border:none;
   margin-top: 5px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   resize: vertical;
   background: #f1f1f1;
 }
