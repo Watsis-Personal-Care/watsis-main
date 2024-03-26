@@ -1,13 +1,17 @@
 <?php
-
 	include('server/connection.php');
 
-	$stmt= $conn->prepare("SELECT * FROM products");
+	$query_body_care = "SELECT * FROM products WHERE product_type='Body Care'";
+	$body_care_prod = mysqli_query($conn, $query_body_care);
 
-	$stmt->execute();
+	$query_dental_care = "SELECT * FROM products WHERE product_type='Dental Care'";
+	$dental_care_prod = mysqli_query($conn, $query_dental_care);
 
-	$products= $stmt->get_result();
+	$query_hair_care = "SELECT * FROM products WHERE product_type='Hair Care'";
+	$hair_care_prod = mysqli_query($conn, $query_hair_care);
 
+	$query_skin_care = "SELECT * FROM products WHERE product_type='Skin Care'";
+	$skin_care_prod = mysqli_query($conn, $query_skin_care);
 ?>
 
 <!DOCTYPE html>
@@ -24,28 +28,109 @@
     <?php include('templates/header.php')?>
     <!--Item List-->
 	<section id="product1" class="section-p1">
-		<h2>Products</h2>
-		<div class="pro-container">
+		<!--All Products-->
+		<!--Body Care category-->
+		<div id="BodyCare">
+			<h2>Body Care</h2>
+			<div class="pro-container">
+				<?php while($row = mysqli_fetch_assoc($body_care_prod)){ ?>
 
-			<?php while($row= $products->fetch_assoc()){ ?>
-
-				<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
-					<img src="<?php echo $row['product_image1']; ?>" alt="">
-					<div class= "des">
-						<span>Watsis</span>
-						<h5><?php echo $row['product_name']; ?></h5>
-						<div class="star">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
+					<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
+						<img src="<?php echo $row['product_image1']; ?>" alt="">
+						<div class= "des">
+							<span>Watsis</span>
+							<h5><?php echo $row['product_name']; ?></h5>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+							<h4>RM<?php echo $row['product_price']; ?></h4>
 						</div>
-						<h4>RM<?php echo $row['product_price']; ?></h4>
+						<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
 					</div>
-					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-				</div>
-			<?php } ?>		
+				<?php } ?>		
+			</div>
+		</div>
+
+		<!--Dental Care category-->
+		<div id="DentalCare">
+			<h2>Dental Care</h2>
+			<div class="pro-container">
+				<?php while($row = mysqli_fetch_assoc($dental_care_prod)){ ?>
+
+					<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
+						<img src="<?php echo $row['product_image1']; ?>" alt="">
+						<div class= "des">
+							<span>Watsis</span>
+							<h5><?php echo $row['product_name']; ?></h5>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+							<h4>RM<?php echo $row['product_price']; ?></h4>
+						</div>
+						<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+					</div>
+				<?php } ?>		
+			</div>
+		</div>
+
+		<!--Hair Care category-->
+		<div id="HairCare">
+			<h2>Hair Care</h2>
+			<div class="pro-container">
+				<?php while($row = mysqli_fetch_assoc($hair_care_prod)){ ?>
+
+					<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
+						<img src="<?php echo $row['product_image1']; ?>" alt="">
+						<div class= "des">
+							<span>Watsis</span>
+							<h5><?php echo $row['product_name']; ?></h5>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+							<h4>RM<?php echo $row['product_price']; ?></h4>
+						</div>
+						<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+					</div>
+				<?php } ?>		
+			</div>
+		</div>
+
+		<!--Skin Care category-->
+		<div id="SkinCare">
+			<h2>Skin Care</h2>
+			<div class="pro-container">
+				<?php while($row = mysqli_fetch_assoc($skin_care_prod)){ ?>
+
+					<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
+						<img src="<?php echo $row['product_image1']; ?>" alt="">
+						<div class= "des">
+							<span>Watsis</span>
+							<h5><?php echo $row['product_name']; ?></h5>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+							<h4>RM<?php echo $row['product_price']; ?></h4>
+						</div>
+						<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+					</div>
+				<?php } ?>		
+			</div>
 		</div>
 	</section>
 	

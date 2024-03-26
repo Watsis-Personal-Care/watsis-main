@@ -42,7 +42,7 @@
                 </div> 
             </div>
             <div class="homepage-discovermore">
-                <a href="">Discover More</a>
+                <a href="itemList.php">Discover More</a>
             </div>
         </div>
         <?php include('templates\footer.php') ?>
