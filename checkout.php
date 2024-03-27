@@ -43,7 +43,7 @@
             width: 80%;
         }
 
-        .row{
+        .corow{
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -62,13 +62,13 @@
             flex: 50%;
         }
 
-        label{
+        .corow label{
             font-size: 16px;
             color: grey;
             margin-bottom: 0.5rem;
         }
 
-        input[type="text"]{
+        .corow input[type="text"]{
             width: 100%;
             height: 40px;
             padding: 0 10px;
@@ -78,23 +78,23 @@
             font-size: 18px;
         }
 
-        input[type="text"]::placeholder{
+        .corow input[type="text"]::placeholder{
             font-size: 14px;
             color: #b9b9b9;
         }
 
-        .input-container{
+        .corow .input-container{
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
 
-        .input-container .input-line{
+        .corow .input-container .input-line{
             width: 48%;
         }
 
-        .btn{
+        .cobtn{
             background-color: rgb(0, 132, 255);
             margin:0 auto;
             color: white;
@@ -108,7 +108,7 @@
 
         }
 
-        .btn:hover{
+        .cobtn:hover{
             background-color: rgb(4, 88, 167);
         }
 
@@ -133,6 +133,33 @@
             top: 50%;
             transform: translate(-50%,-50%) scale(1);
         }
+
+        .poptick img{
+            width:100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .poptick h4{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+
+        .poptick button{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: #6fd649;
+            color: #fff;
+            border: 0;
+            outline:none;
+            font-size: 18px;
+            border-radius:4px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -141,7 +168,7 @@
         <div class="checkout-form-container">
             <h2 class="checkout-from-title">Check Out Details</h2>
             <form action="" class="checkout-form">
-                <div class="row">
+                <div class="corow">
                     <div class="col-50">
                         <h3>Billing Address</h3>
                         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
@@ -177,7 +204,7 @@
                         <label for="expmonth">Expiring Month</label>
                         <input type="text" id="expmonth" name="expmonth" placeholder="September">
 
-                        <div class="row">
+                        <div class="corow">
                             <div class="col-50">
                                 <label for="expyear">Expiring Year</label>
                                 <input type="text" id="expyear" name="expyear" placeholder="2018">
@@ -189,8 +216,8 @@
                         </div>
                     </div>  
                 </div>
-            <button type="button"  class="btn" onclick="openPopup()" >Submit</button>
-            <div class="poptick" id="poptick">
+            <button type="button"  class="cobtn" onclick="openPopup()" >Submit</button>
+            <div class="poptick" id="poptick" style="position:fixed">
                 <img src="tick.png" width="50px">
                 <h4>Thank You!<h4>
                 <p>Details have been succesfully uploaded. Thanks!</p>
