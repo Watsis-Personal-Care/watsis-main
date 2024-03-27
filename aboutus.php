@@ -8,7 +8,7 @@
         <?php include("../Asgm/header.php")?>
         <div style="margin-top:300px">
             <div class="aboutus-head" style="text-align:center; margin-bottom: 50px">
-                <img src="watsis_about_us.png" alt="watisis store" width="1200px" height="600px">
+                <img src="images/watsis_about_us.png" alt="watisis store" width="1200px" height="600px">
                 <h2 style="font-size:30px">About Us</h2>
                 <p style="width:50%; margin:0 auto; text-align:justify; font-size: 25px">
                     Welcome to Watsis Personal Care, your premier destination for top-quality personal care products designed to elevate your daily routine. 
@@ -27,11 +27,11 @@
                         offering products that promote confidence, health, and vitality.
                     </p>
                 </div>
-                <img src="our_mission.png" alt="pic">
+                <img src="images/our_mission.png" alt="pic">
             </div>
             <hr>
             <div class="aboutus-rows">
-                <img src="product_quality.png" alt="pic">
+                <img src="images/product_quality.png" alt="pic">
                 <div class="aboutus-para-even">
                     <h3>Premium Quality Products</h3>
                     <p>
@@ -53,11 +53,11 @@
                         By choosing Watsis Personal Care, you can feel good about the products you use, knowing that they are produced with integrity and respect for the planet.
                     </p>
                 </div>
-                <img src="ethical_and_sustainable_practices.png" alt="pic">
+                <img src="images/ethical_and_sustainable_practices.png" alt="pic">
             </div>
             <hr>
             <div class="aboutus-rows">
-                <img src="customer_satisfaction_guarantee.png" alt="pic">
+                <img src="images/customer_satisfaction_guarantee.png" alt="pic">
                 <div class="aboutus-para-even">
                     <h3>Customer Satisfaction Guaranteed</h3>
                     <p>
@@ -78,11 +78,11 @@
                         #WatsisPersonalCare - we love hearing from our customers and seeing how our products enhance your daily routines.
                     </p>
                 </div>
-                <img src="join_watsis_community.png" alt="pic">
+                <img src="images/join_watsis_community.png" alt="pic">
             </div>
             <hr>
             <div class="aboutus-rows">
-                <img src="experience_the_difference.png" alt="pic">
+                <img src="images/experience_the_difference.png" alt="pic">
                 <div class="aboutus-para-even">
                     <h3>Experience the Difference with Watsis Personal Care</h3>
                     <p>
