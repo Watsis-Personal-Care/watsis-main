@@ -649,6 +649,34 @@ body {
 
 /* End of style for wishlist page */
 
+/* Start of style for about us page */
+.aboutus-rows {
+	display:flex;
+	flex-direction: row;
+	width: 75%;
+	margin: 50px auto;
+	font-size: 25px;
+	justify-content: space-between;
+	text-align: justify;
+}
+
+.aboutus-para-odd p {
+	margin-right: 20px;
+}
+
+.aboutus-para-even {
+	margin-left: 20px;
+}
+
+.aboutus-rows img {
+	width:600px;
+}
+
+hr {
+	width: 75%;;
+}
+/* End of style for about us page*/
+
 /*Contact Us page start here*/
 .contact{
 	font-family: Arial, Helvetica, sans-serif;
