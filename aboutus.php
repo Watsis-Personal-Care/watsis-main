@@ -3,34 +3,6 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-        <style>
-            .aboutus-rows {
-                display:flex;
-                flex-direction: row;
-                width: 75%;
-                margin: 50px auto;
-                font-size: 25px;
-                justify-content: space-between;
-                text-align: justify;
-            }
-
-            .aboutus-para-odd p {
-                margin-right: 20px;
-            }
-
-            .aboutus-para-even {
-                margin-left: 20px;
-            }
-
-            .aboutus-rows img {
-                width:600px;
-            }
-
-            hr {
-                width: 75%;;
-            }
-            
-        </style>
     </head>
     <body>
         <?php include("../Asgm/header.php")?>
@@ -121,7 +93,6 @@
                 </div>
             </div>
         </div>
-        
         <?php include("../Asgm/footer.php")?>
     </body>
 </html>
