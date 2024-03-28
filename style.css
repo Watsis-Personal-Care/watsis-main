@@ -132,12 +132,6 @@
   font-size: 36px;
   margin-left: 50px;
 }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-body{
-  transition: margin-left .5s;
-  padding: 20px;
-}
   
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -147,72 +141,81 @@ body{
 /*End Style for Side bar menu*/
 
 /* Homepage scroller styles*/
-.popular-product {
-  display: block;
-  margin-top: 300px;
-  margin-left: 20px;
-  font-size: 40px;
+.homepage {
+	margin-top: 90px;
+	font-size: 40px;
+}
+
+.promote-prod {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+
+.promote-prod img {
+	width: 80%;
+	transition: transform 0.5s ease;
+}
+
+.promote-prod img:hover {
+	opacity: 0.8;
+	border-radius: 25px;
+}
+
+.brief-aboutus {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 50px 0;
+}
+
+.briefing {
+	text-align: center;
+	margin: 0 50px;
+	width: 150px;
+	font-size: 20px
+}
+
+.briefing img {
+	width: 150px;
 }
 
 .homepage-scroll-container {
-  background-color: rgb(243, 241, 237);
-  margin: 0px 20px;
-  overflow: auto;
-  white-space: nowrap;
-  position: relative;
-  transition: transform 0.5s ease;
+	background-color: rgb(243, 241, 237);
+	margin: 0px 20px;
+	overflow: auto;
+	white-space: nowrap;
+	position: relative;
+	transition: transform 0.5s ease;
 }
 
 .homepage-scroll-container::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+	width: 0px;
+	background: transparent;
 }
 
-.image-container {
-  display: inline-block;
-  position: relative;
-}
-
-.image-container img {
-  padding: none;
-  width: 500px;
-  display: inline-block;
-  vertical-align: center;
-  position: relative;
-}
-
-.overlay-homepage-img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  color: #000000;
-  transition: .5s ease;
-  opacity: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.image-container:hover .overlay-homepage-img {
-  opacity: 1;
+.homepage-scroll-container img {
+	padding: 50px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: center;
+	position: relative;
 }
 
 .homepage-discovermore  {
-  text-align: center; 
-  margin-bottom: 50px;
-  text-decoration: underline; 
-  font-size: 35px;
+	text-align: center; 
+	margin-bottom: 50px;
+	text-decoration: underline; 
+	font-size: 35px;
 }
 
 .homepage-discovermore a {
-  color:black;
+	color:black;
 }
 
 .homepage-discovermore a:hover {
-  color:grey;
+	color:grey;
 }
 /* End of Homepage scroller styles*/
 
