@@ -7,8 +7,64 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
+	<style>
+        .error {
+            color: red;
+        }
+   	</style>
 </head>
 <body>
+	<?php
+	// contact/index.php
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		// Initialize variables
+		$name = $_POST['name'] ?? '';
+		$email = $_POST['email'] ?? '';
+		$phone = $_POST['phone'] ?? '';
+
+		// Initialize an array to hold error messages
+		$errors = [];
+
+		// Perform validation
+		if (empty($name)) {
+			$errors['name'] = '*Name is required';
+		}
+		if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$errors['email'] = '*A valid email is required';
+		}
+		$phone = str_replace([' ', '-', '(', ')'], '', $phone); // Strip common formatting characters
+		if (empty($phone)) {
+			$errors['phone'] = '*Phone number is required.';
+		} elseif (!ctype_digit($phone)) {
+			$errors['phone'] = '*Phone number must be numeric.';
+		} 
+		
+		// Check if there are any errors
+		if (empty($errors)) {
+			// Process the input (send mail, etc.)
+			// For example:
+			echo '<div class="container3">';
+			echo "<h2>Submission Details</h2>";
+			echo "Name: " . htmlspecialchars($name) . "<br>";
+			echo "Email: " . htmlspecialchars($email) . "<br>";
+			echo "Phone: " . htmlspecialchars($phone) . "<br>";
+			//mail('jim@test.com', 'Contact Form Submission', $message, "From: $email");
+
+			// Redirect or display a success message
+			echo 'Thank you for contacting us! We will get back to you shortly.';
+			echo "</div>";
+		} else {
+			// Redisplay the form, with error messages
+			include('contact_form.php');
+		}
+	} else {
+		// Display the form for the first time
+		$name = $email = $phone = $message = $salutation = '';
+		$enquiry = [];
+		$errors = [];
+		include('contact_form.php');
+	}
+	?>
 	<!--Nav Bar-->
     <?php include('templates/header.php')?>
 	
@@ -41,49 +97,8 @@
 					<div class="text">
 						<h3>Email</h3>
 						<p>info@utar.edu.my</p>
+					</div>
 				</div>
-			</div>
-			<div class="FeedbackForm">
-				<button class="open-button" onclick="openForm()">Feedback</button>
-				<div class="container2" id="containerId">
-					<form action="/action_page.php" class="form-container">
-						<h1>Feedback</h1>
-
-						<label for="name"><b>Full Name</b></label>
-						<input type="text" id="name" placeholder="Full name.." name="name" required>
-
-						<label for="email"><b>Email Address</b></label>
-						<input type="text" id="email" placeholder="Email Address.." name="email" required>
-						
-						<label for="phone"><b>Phone Number</b></label>
-						<input type="text" id="phone" placeholder="Phone Number.." name="phone" required>
-						
-						<label for="country"><b>Country</b></label>
-						<select id="country" name="country">
-							<option value="china">China</option>
-							<option value="korea">Korea</option>
-							<option value="malaysia">Malaysia</option>		
-						</select>
-						
-						<label for="subject"><b>Subject</b></label>
-						<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
-						
-						
-						<div class="feedbackFormButton">
-							<button type="submit" class="btn">Submit</button>
-							<button type="button" class="btn cancel" onclick="closeForm()">Back</button>
-						</div>
-					</form>
-				</div>
-				<script>
-					function openForm() {
-					  document.getElementById("containerId").style.display = "block";
-					}
-
-					function closeForm() {
-					  document.getElementById("containerId").style.display = "none";
-					}
-				</script>
 			</div>
 		</div>
 	</section>
