@@ -142,80 +142,123 @@
 
 /* Homepage scroller styles*/
 .homepage {
-	margin-top: 90px;
-	font-size: 40px;
+  margin-top: 90px;
+  font-size: 40px;
 }
 
 .promote-prod {
-	margin-top: 50px;
-	display: flex;
-	flex-direction: row;
-	text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+
+.promote-prod-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 50px;
+}
+
+.promote-prod a {
+  width: 50%;
 }
 
 .promote-prod img {
-	width: 80%;
-	transition: transform 0.5s ease;
+  width: 100%;
+  transition: transform 0.5s ease;
 }
 
 .promote-prod img:hover {
-	opacity: 0.8;
-	border-radius: 25px;
+  opacity: 0.8;
+  border-radius: 25px;
 }
 
 .brief-aboutus {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	margin: 50px 0;
-}
-
-.briefing {
-	text-align: center;
-	margin: 0 50px;
-	width: 150px;
-	font-size: 20px
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 50px 0;
 }
 
 .briefing img {
-	width: 150px;
+  width: 150px;
+}
+
+.briefing {
+  text-align: center;
+  margin: 0 50px;
+  width: 150px;
+  font-size: 20px
 }
 
 .homepage-scroll-container {
-	background-color: rgb(243, 241, 237);
-	margin: 0px 20px;
-	overflow: auto;
-	white-space: nowrap;
-	position: relative;
-	transition: transform 0.5s ease;
+  background-color: rgb(243, 241, 237);
+  margin: 0px 20px;
+  overflow: auto;
+  white-space: nowrap;
+  position: relative;
+  transition: transform 0.5s ease;
 }
 
 .homepage-scroll-container::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
+  width: 0px;
+  background: transparent;
 }
 
 .homepage-scroll-container img {
-	padding: 50px;
-	width: 500px;
-	display: inline-block;
-	vertical-align: center;
-	position: relative;
+  padding: 50px;
+  width: 500px;
+  display: inline-block;
+  vertical-align: center;
+  position: relative;
+}
+
+.image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.image-container img {
+  width: 500px;
+  display: inline-block;
+  vertical-align: center;
+  position: relative;
+}
+
+.overlay-homepage-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.image-container:hover .overlay-homepage-img {
+  opacity: 1;
 }
 
 .homepage-discovermore  {
-	text-align: center; 
-	margin-bottom: 50px;
-	text-decoration: underline; 
-	font-size: 35px;
+  text-align: center; 
+  margin-bottom: 50px;
+  text-decoration: underline; 
+  font-size: 35px;
 }
 
 .homepage-discovermore a {
-	color:black;
+  color:black;
 }
 
 .homepage-discovermore a:hover {
-	color:grey;
+  color:grey;
 }
 /* End of Homepage scroller styles*/
 
