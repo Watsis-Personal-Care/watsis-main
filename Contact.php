@@ -65,6 +65,13 @@
 		include('contact_form.php');
 	}
 	?>
+	<script>
+	<?php if (!empty($errors)) { ?>
+		window.onload = function() {
+			document.getElementById("containerId").style.display = "block";
+		};
+	<?php } ?>
+	</script>
 	<!--Nav Bar-->
     <?php include('templates/header.php')?>
 	
