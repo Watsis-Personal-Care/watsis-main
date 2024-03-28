@@ -28,9 +28,16 @@
     <!--Nav Bar-->
     <?php include('templates/header.php')?>
     <!--Item List-->
-	<img src="images/homepage_pic.png" alt="homepage_pic" width="100%">
+
+	<div class="header-itemList">
+		<img class="itemList-pic" src="images/background2.png" alt="background_pic" width="100%">
+            <nav>
+                <div class="content">
+                    <h1>Watsis</h1>
+                 <a href="#BodyCare">Check Out Our Products Now!</a>
+            </nav>
+	</div>
 	<section id="product1" class="section-p1">
-		<h2>All Products</h2>
 		<!--Body Care category-->
 		<div id="BodyCare">
 			<h2>Body Care</h2>
@@ -134,13 +141,7 @@
 				<?php } ?>		
 			</div>
 		</div>
-	</section>
-	
-	<!-- Promotion -->
-	<section id="banner" class="section-m1">
-		<h4>Promotion</h4>
-		<h2>Up to <span>90% Off<span>-All categories</h2>
-		<button>Explore more</button>
+		<h2>New products Coming Soon!</h2>
 	</section>
 
 	<!--Footer-->

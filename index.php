@@ -9,7 +9,7 @@
     <body>
         <?php include('templates/header.php') ?>
         <div class="homepage">
-        <div class="hero">
+        <div class="backVideo">
             <video autoplay loop muted plays-inline class="back-video">
                 <source src="images/background.mp4" type="video/mp4">
             </video>
@@ -21,9 +21,9 @@
             </div>
             <div class="promote-prods" style="margin-top: 50px">
                 <div class="promote-prod">
-                    <a href=""><img src="images/promote_prod1" alt="promote_prod1"></a>
+                    <a href="itemDetails.php?product_id=6"><img src="images/promote_prod1" alt="promote_prod1"></a>
                     <div class="promote-prod-desc">
-                        <p  style="text-align: justify; font-size: smaller;">
+                        <p  style="text-align: justify; font-size: 30px;">
                             "Is your hair feeling flat and lifeless? Does it lack volume? 
                             You're not alone. 
                             But there is a solution. Introducing Grafen Root Booster Shampoo, 
@@ -38,7 +38,7 @@
                 </div>
                 <div class="promote-prod">
                     <div class="promote-prod-desc">
-                        <p style="text-align: justify; font-size: smaller;">
+                        <p style="text-align: justify; font-size: 30px;">
                             "Indulge in the transformative power of The Ritual of Sakura body oil. 
                             Enriched with cherry blossom extract and rice milk, 
                             this luxurious oil hydrates, nourishes and leaves your 
@@ -49,7 +49,7 @@
                         </p>
                         </div>
                     
-                    <a href=""><img src="images/promote_prod2" alt="promote_prod2"></a>
+                    <a href="itemDetails.php?product_id=3"><img src="images/promote_prod2" alt="promote_prod2"></a>
                     
                 </div>
             </div>
