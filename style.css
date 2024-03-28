@@ -1033,6 +1033,23 @@ hr {
   opacity: 1;
 }
 
+.container3{
+  display: inline-block;
+  position: fixed;
+  bottom: 0px;
+  right: 35px;
+  z-index: 98;
+  background-color: #fff;
+  border: 3px solid #04AA6D; /* Green border for success */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  max-width: 400px; /* Adjust as needed */
+  text-align: center;
+  font-size: 18px;
+  color: #04AA6D; /* Green text for success */
+}
+
 /* Footer styles */
 footer {
   position: absolute;
