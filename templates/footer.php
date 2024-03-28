@@ -13,7 +13,7 @@
         <p>More Links</p>
         <nav class="footernav-left">
             <a href="#">About Us</a>
-            <a href="#">Product</a>
+            <a href="itemList.php">Product</a>
             <a href="#">Contact</a>
         </nav>
         <img src="images/Watsis_xbg.png" alt="logo" width = "180px">
