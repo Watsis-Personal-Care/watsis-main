@@ -37,7 +37,9 @@
 			$errors['phone'] = '*Phone number is required.';
 		} elseif (!ctype_digit($phone)) {
 			$errors['phone'] = '*Phone number must be numeric.';
-		} 
+		} elseif(!preg_match("/^[0,9]{10}$/", $phone)){
+			$errors['phone'] = '*Phone number should have 10 digits';
+		}
 		
 		// Check if there are any errors
 		if (empty($errors)) {

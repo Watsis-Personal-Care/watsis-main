@@ -189,15 +189,9 @@ function calculateTotalCart(){
                     <span id="amount">RM <span><?php echo number_format($_SESSION['total'] + 4.90, 2); ?></span></span>
                 </div>
                 
-
-                <div class="promo_code">
-                    <h3>Promo Code</h3>
-                    <input type="text" id="code" name="code" placeholder="Enter your code here"><br><br>
-                    <button>Apply</button>
-                </div>
                 <br>
                 <div class="checkout_button">
-                    <button>Checkout</button>
+                    <button onclick="location.href='delivery.php'">Checkout</button>
                 </div>
             </div>
             <?php } else { ?>
