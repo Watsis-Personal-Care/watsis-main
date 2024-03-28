@@ -473,6 +473,195 @@ body {
 }
 /* End of style for cart page */
 
+/* Style for checkout page */
+.checkout,
+.payment{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 550px;
+}
+
+.checkout-form-container{
+  background-color: #fcf4ec;
+  width: 70%;
+  margin-top: 18rem;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.checkout-form-title{
+  text-align: center; /* Center the titles */
+  position: relative; /* Position relative for the line */
+  width: 100%;
+  display: flex;
+  margin-top: 15px
+}
+
+.checkout-form-title h2{
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.8;
+  flex: 1;
+  text-align: center;
+}
+
+.checkout-form-title #delivery{
+  color: rgb(0, 0, 0);
+}
+
+.checkout-form-title #payment{
+  color: rgb(154, 152, 152);
+}
+
+.checkout-form-title #delivery i{
+  margin-right: 5px;
+}
+
+.checkout-form-container hr{
+  height: 3px; /* Set the height to make it thick */
+  background-image: linear-gradient(to right, black 50%, gray 50%); /* Gradient for the line */
+  margin: 0 auto;
+  width: 90%;
+  justify-content: center;
+}
+
+.payment .checkout-form-title #payment{
+  color: rgb(0, 0, 0);
+}
+
+.payment .checkout-form-container hr{
+  background-image: linear-gradient(black, black);
+}
+
+.checkout-form,
+.payment-form{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%;
+}
+
+.corow{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.corow label{
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 0.5rem;
+}
+
+.corow input[type="text"],
+.corow select{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.corow input[type="text"]::placeholder,
+.corow select{
+  font-size: 14px;
+  color: #b9b9b9;
+}
+
+.corow select option{
+  color:rgb(0, 0, 0);
+}
+
+.payment-button{
+  display: inline-block;
+}
+
+.checkout button,
+.payment button{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 18px;
+}
+
+.checkout button:hover,
+.payment button:hover{
+  background-color: rgb(243, 241, 237);
+}
+
+.poptick{
+  width: 300px;
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  border: 1px solid rgb(194, 202, 199);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 10px 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 99;
+}
+
+.open-poptick{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.poptick img{
+  margin-top: 10px;
+  width: 80%;
+}
+
+.poptick p{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.poptick button{
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: rgb(227, 241, 222);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  outline:none;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  align-items: center;
+}
+/* End of checkout page */
+
 /* Style for wishlist page */
 .wishlist .heading{
     text-align: center;
