@@ -9,12 +9,21 @@
     <body>
         <?php include('templates/header.php') ?>
         <div class="homepage">
-            <img src="images/homepage_pic.png" alt="homepage_pic" width="100%">
+        <div class="hero">
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="images/background.mp4" type="video/mp4">
+            </video>
+                <nav>
+                    <div class="content">
+                        <h1>Watsis</h1>
+                        <a href="itemList.php">Explore</a>
+                </nav>
+            </div>
             <div class="promote-prods" style="margin-top: 50px">
                 <div class="promote-prod">
                     <a href=""><img src="images/promote_prod1" alt="promote_prod1"></a>
                     <div class="promote-prod-desc">
-                        <p style="text-align: justify">
+                        <p  style="text-align: justify; font-size: smaller;">
                             "Is your hair feeling flat and lifeless? Does it lack volume? 
                             You're not alone. 
                             But there is a solution. Introducing Grafen Root Booster Shampoo, 
@@ -29,7 +38,7 @@
                 </div>
                 <div class="promote-prod">
                     <div class="promote-prod-desc">
-                        <p style="text-align: justify">
+                        <p style="text-align: justify; font-size: smaller;">
                             "Indulge in the transformative power of The Ritual of Sakura body oil. 
                             Enriched with cherry blossom extract and rice milk, 
                             this luxurious oil hydrates, nourishes and leaves your 

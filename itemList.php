@@ -28,6 +28,7 @@
     <!--Nav Bar-->
     <?php include('templates/header.php')?>
     <!--Item List-->
+	<img src="images/homepage_pic.png" alt="homepage_pic" width="100%">
 	<section id="product1" class="section-p1">
 		<h2>All Products</h2>
 		<!--Body Care category-->
