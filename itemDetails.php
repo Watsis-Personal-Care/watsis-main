@@ -58,8 +58,21 @@
         <div class= "single-pro-details">
             <h6>Home/ <?php echo $row['product_type']; ?></h6>
             <h4><?php echo $row['product_name']; ?></h4>
-            <h2>RM<?php echo $row['product_price']; ?></h2>
-			
+			<div id="button-container">
+				<div class="price-container">
+					<h2>RM<?php echo $row['product_price']; ?></h2>
+				</div>
+				<form method="POST" action="wishlist.php">
+					<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
+					<input type="hidden" name="product_image" value="<?php echo $row['product_image1']; ?>"/>
+					<input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>"/>
+					<input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>"/>
+					<button id="addButton" class="addWishlist" type="submit" name="addwishlist">
+						<i class="fa-solid fa-heart"></i>
+					</button>
+				</form>
+			</div>
+
 			<form method="POST" action="cart.php">
 				<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
 				<input type="hidden" name="product_image" value="<?php echo $row['product_image1']; ?>"/>
@@ -70,19 +83,9 @@
 					<input type="text" name='product_qty' id="quantity_<?php echo $row['product_id']; ?>" value="1" min="1">
 					<button type="button" onclick="increment(<?php echo $row['product_id']; ?>)">+</button>
 				</div>
-            	<button class="addcart" type="submit" name="addcart">Add to Cart</button>
+            		<button id="addButton" class="addcart" type="submit" name="addcart">Add to Cart</button>
 			</form>
 
-			<form method="POST" action="wishlist.php">
-				<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
-				<input type="hidden" name="product_image" value="<?php echo $row['product_image1']; ?>"/>
-				<input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>"/>
-				<input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>"/>
-				<!--change your wishlist style here-->
-				<button type="submit" name="addwishlist">
-					<i class="fa-solid fa-heart"></i>
-				</button>
-			</form>
 			<h4>Product Details</h4>
             <span><?php echo $row['product_description']; ?> </span>
 

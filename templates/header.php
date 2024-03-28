@@ -37,11 +37,11 @@
     <div class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <p style="text-decoration:underline">Categories: </p>
+      <a href="itemList.php">All Products</a>
       <a href="itemList.php#BodyCare">Body Care</a>
       <a href="itemList.php#DentalCare">Dental Care</a>
       <a href="itemList.php#HairCare">Hair Care</a>
       <a href="itemList.php#SkinCare">Skin Care</a>
-      <a href="">Promotion</a>
     </div>
   </body>
 </html>
