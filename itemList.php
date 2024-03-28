@@ -13,8 +13,6 @@
 	$query_skin_care = "SELECT * FROM products WHERE product_type='Skin Care'";
 	$skin_care_prod = mysqli_query($conn, $query_skin_care);
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +29,7 @@
     <?php include('templates/header.php')?>
     <!--Item List-->
 	<section id="product1" class="section-p1">
-
-		<!--All Products-->
+		<h2>All Products</h2>
 		<!--Body Care category-->
 		<div id="BodyCare">
 			<h2>Body Care</h2>
@@ -144,36 +141,6 @@
 		<h2>Up to <span>90% Off<span>-All categories</h2>
 		<button>Explore more</button>
 	</section>
-
-	<!--Products-->
-	<section id="product1" class="section-p1">
-		<h2>Featured Products</h2>
-		<div class="pro-container">
-			<?php include('server/get_featured_products.php'); ?>
-
-			<?php while($row= $products->fetch_assoc()){ ?>
-
-				<div class ="pro" onclick="window.location.href='itemDetails.php?product_id=<?php echo $row['product_id']; ?>'">
-					<img src="<?php echo $row['product_image1']; ?>" alt="">
-					<div class= "des">
-						<span>Watsis</span>
-						<h5><?php echo $row['product_name']; ?></h5>
-						<div class="star">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<h4>RM<?php echo $row['product_price']; ?></h4>
-					</div>
-					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-				</div>
-			<?php } ?>
-			
-		</div>
-	</section>
-
 
 	<!--Footer-->
 	<?php include('templates/footer.php')?>
