@@ -16,7 +16,7 @@
 	}else{
 		header('location: index.php');
 	}	
-	?> 
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,10 +90,10 @@
 		<?php } ?>
     </section>
 
-	<!--Related products-->
+	<!--Featured products-->
     <section id="product1" class="section-p1">
 		<h2>Featured Products</h2>
-		<p>Personal Care</p>
+		<p>Check out our featured products!</p>
 			<div class="pro-container">
 			<?php include('server/get_featured_products.php');?>
 
