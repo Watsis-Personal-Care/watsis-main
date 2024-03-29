@@ -2,11 +2,11 @@
 
 session_start();
 
-// Check if "Back" button is clicked
-if(isset($_POST['backBtn'])){
-    header("Location: delivery.php");
-    exit; // Ensure script stops executing after redirection
-}
+// // Check if "Back" button is clicked
+// if(isset($_POST['backBtn'])){
+//     header("Location: delivery.php");
+//     exit; // Ensure script stops executing after redirection
+// }
 
 
 // Define variable and corresponding error variable with empty value
@@ -95,7 +95,7 @@ function test_input($data) {
 
 
 // If payment is successful, unset session variables
-if(isset($_POST['payBtn']) && !$showPopup){
+if(isset($_POST['payBtn']) && $showPopup){
     unset($_SESSION['delivery_data']);
     unset($_SESSION['cart']);
 }
@@ -166,7 +166,7 @@ if(isset($_POST['payBtn']) && !$showPopup){
                     </div>
                 </div>
                 <div class="payment-button">
-                    <button type="submit" name="backBtn">Back</button>
+                    <button type="button" name="backBtn" onclick="window.location.href='delivery.php';">Back</button>
                     <button type="submit" name="payBtn">Pay</button>
                 </div>
                 <div class="poptick" id="poptick" style="position:fixed">

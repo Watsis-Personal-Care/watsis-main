@@ -3,10 +3,10 @@
 session_start();
 
 // Check if "Back" button is clicked
-if(isset($_POST['backBtn'])){
-    header("Location: cart.php");
-    exit; // Ensure script stops executing after redirection
-}
+// if(isset($_POST['backBtn'])){
+//     header("Location: cart.php");
+//     exit; // Ensure script stops executing after redirection
+// }
 
 //Define error variables and variables with empty value
 $fnameErr = $emailErr = $phoneErr = $addressErr = $cityErr = $stateErr = "";
@@ -207,7 +207,7 @@ if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addres
                     </div>
                 </div>
                 <div class="checkout-button">
-                    <button type="submit" name="backBtn">Back</button>
+                    <button type="button" name="backBtn" onclick="window.location.href='cart.php';">Back</button>
                     <button type="submit" name="submitBtn">Submit</button>
                 </div>
             </form>

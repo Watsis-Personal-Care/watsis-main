@@ -5,7 +5,7 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <?php include("../Asgm/header.php")?>
+        <?php include('templates/header.php')?>
         <div style="margin-top:300px">
             <div class="aboutus-head" style="text-align:center; margin-bottom: 50px">
                 <img src="images/watsis_about_us.png" alt="watisis store" width="1200px" height="600px">
@@ -93,6 +93,6 @@
                 </div>
             </div>
         </div>
-        <?php include("../Asgm/footer.php")?>
+        <?php include('templates/footer.php')?>
     </body>
 </html>
