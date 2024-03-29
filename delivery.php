@@ -98,7 +98,35 @@ function test_input($data) {
     return $data;
   }
 
+  if(isset($_SESSION['delivery_data'])){
+    $delivery_data = $_SESSION['delivery_data'];
+    $fname = isset($delivery_data['fname']) ? $delivery_data['fname'] : '';
+    $email = isset($delivery_data['email']) ? $delivery_data['email'] : '';
+    $phone = isset($delivery_data['phone']) ? $delivery_data['phone'] : '';
+    $address = isset($delivery_data['address']) ? $delivery_data['address'] : '';
+    $city = isset($delivery_data['city']) ? $delivery_data['city'] : '';
+    $state = isset($delivery_data['state']) ? $delivery_data['state'] : '';
+}
 
+// Check if form data exists in $_POST, otherwise use session data
+$fname = isset($_POST['fname']) ? $_POST['fname'] : $fname;
+$email = isset($_POST['email']) ? $_POST['email'] : $email;
+$phone = isset($_POST['phone']) ? $_POST['phone'] : $phone;
+$address = isset($_POST['address']) ? $_POST['address'] : $address;
+$city = isset($_POST['city']) ? $_POST['city'] : $city;
+$state = isset($_POST['state']) ? $_POST['state'] : $state;
+
+$_SESSION['delivery_data'] = array(
+    'fname' => $fname,
+    'email' => $email,
+    'phone' => $phone,
+    'address' => $address,
+    'city' => $city,
+    'state' => $state
+);
+
+if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addressErr) || !empty($cityErr) || !empty($stateErr)){
+}
 
 ?>
 
