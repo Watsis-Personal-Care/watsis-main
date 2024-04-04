@@ -1,7 +1,51 @@
 <?php
 
 session_start();
+include('server\connection.php');
 
+if (isset($_POST['payBtn'])) {
+    //get user info and store it in database
+    $order_cost= $_SESSION['total'];
+    $delivery_data = $_SESSION['delivery_data'];
+    $name = $delivery_data['fname'];
+    $email = $delivery_data['email'];
+    $phone = $delivery_data['phone'];
+    $address = $delivery_data['address'];
+    $city = $delivery_data['city'];
+    $state = $delivery_data['state'];
+    $user_id = 1; // $_SESSION['user_id'];
+
+    $stmt = $conn->prepare("INSERT INTO orders(order_cost, user_id, user_name, user_email, user_phone, user_address, user_city, user_state)
+                    VALUES (?,?,?,?,?,?,?,?); ");
+
+    $stmt->bind_param('dissssss', $order_cost, $user_id, $name, $email, $phone, $address, $city, $state);
+
+    $stmt_status= $stmt->execute();
+    if (!$stmt_status){
+        header('location: index.php');
+        exit;
+    }
+
+    //issue new order and store order info in database
+    $order_id = $stmt->insert_id;
+    
+//get products from cart (from session)
+foreach ($_SESSION['cart'] as $key => $value) {
+    $product = $_SESSION['cart'][$key];
+    $product_id = $product['product_id'];
+    $product_name = $product['product_name'];
+    $product_price = $product['product_price'];
+    $product_image = $product['product_image'];
+    $product_qty = $product['product_qty'];
+
+    //store each single item in order_items database
+    $stmt1 = $conn->prepare("INSERT INTO order_items(order_id, product_id, product_name, product_price, product_image, product_qty, user_id)
+                    VALUES (?,?,?,?,?,?,?)");
+    $stmt1->bind_param('iisdssi', $order_id, $product_id, $product_name, $product_price, $product_image, $product_qty, $user_id);
+    
+    $stmt1->execute();
+    }
+}
 // // Check if "Back" button is clicked
 // if(isset($_POST['backBtn'])){
 //     header("Location: delivery.php");
@@ -126,7 +170,7 @@ if(isset($_POST['payBtn']) && $showPopup){
             </div>
             <hr>
             
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="payment-form">
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"class="payment-form">
                 <div class="corow">
                     <div class="col-50">
                         <h3>Payment</h3>
@@ -193,6 +237,8 @@ if(isset($_POST['payBtn']) && $showPopup){
         popup.classList.add("open-poptick");
         <?php endif; ?>
         
+
     </script>
+
 </body>
 </html>
