@@ -210,7 +210,7 @@ if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addres
                     <button type="button" name="backBtn" onclick="window.location.href='cart.php';">Back</button>
                     <button type="submit" name="submitBtn">Submit</button>
                 </div>
-            </form>
+            </form>  
         </div>
     </div>
     <?php include("templates/footer.php")?>
