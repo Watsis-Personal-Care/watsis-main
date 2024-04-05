@@ -1017,14 +1017,18 @@ body {
 
 .aboutus-head h2{
   font-size: 30px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .aboutus-head p{
   width:50%; 
   margin:0 auto; 
   text-align:justify; 
-  font-size: 25px;
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .aboutus-rows {
 	display:flex;
 	flex-direction: row;
@@ -1035,16 +1039,24 @@ body {
 	text-align: justify;
 }
 
-.aboutus-para-odd p {
-	margin-right: 20px;
+.aboutus-para-odd h3,
+.aboutus-para-even h3{
+  font-weight: 500;
+  font-size: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.aboutus-para-even {
-	margin-left: 20px;
+.aboutus-para-odd p,
+.aboutus-para-even p {
+	margin-right: 20px;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .aboutus-rows img {
-	width:600px;
+	width: 450px;
+  margin: 18px 20px;
+  border-radius: 30px;
 }
 
 hr {

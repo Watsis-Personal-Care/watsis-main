@@ -31,7 +31,7 @@
             </div>
             <hr>
             <div class="aboutus-rows">
-                <img src="images/product_quality.png" alt="pic">
+                <img src="images/product_quality.jpg" alt="pic">
                 <div class="aboutus-para-even">
                     <h3>Premium Quality Products</h3>
                     <p>
