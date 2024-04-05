@@ -136,6 +136,9 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="sign-in-up-logo">
+        <img src = "images\watsis_personal_care-xbg.png" alt="watsis_logo">
+    </div>
     <div class="sign-in-up-formbox">
         <div class="sign-in-up-button-box">
             <div id="sign-in-up-btn"></div>

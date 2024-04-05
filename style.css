@@ -141,11 +141,17 @@
 /*End Style for Side bar menu*/
 
 /* Style the sign in up tab */
+.sign-in-up-logo{
+  text-align: center;
+  margin: 0 auto;
+  top: 0;
+}
+
 .sign-in-up-formbox {
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 6% auto;
+    margin: 50px auto;
     background: #fff;
     padding: 5px;
     overflow: hidden;
