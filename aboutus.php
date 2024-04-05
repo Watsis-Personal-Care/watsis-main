@@ -6,11 +6,11 @@
     </head>
     <body>
         <?php include('templates/header.php')?>
-        <div style="margin-top:300px">
-            <div class="aboutus-head" style="text-align:center; margin-bottom: 50px">
-                <img src="images/watsis_about_us.png" alt="watisis store" width="1200px" height="600px">
-                <h2 style="font-size:30px">About Us</h2>
-                <p style="width:50%; margin:0 auto; text-align:justify; font-size: 25px">
+        <div>
+            <div class="aboutus-head">
+                <img src="images/watsis_about_us.png" alt="watisis store">
+                <h2>About Watsis</h2>
+                <p>
                     Welcome to Watsis Personal Care, your premier destination for top-quality personal care products designed to elevate your daily routine. 
                     At Watsis, we believe in the power of self-care and strive to provide our customers with a diverse range of skincare, haircare, mouthcare, 
                     and face care solutions to meet their individual needs.

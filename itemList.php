@@ -34,7 +34,8 @@
             <nav>
                 <div class="content">
                     <h1>Watsis</h1>
-                 <a href="#BodyCare">Check Out Our Products Now!</a>
+                 	<a href="#BodyCare">Check Out Our Products Now!</a>
+				</div>
             </nav>
 	</div>
 	<section id="product1" class="section-p1">
