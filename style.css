@@ -1011,8 +1011,9 @@ body {
 }
 
 .aboutus-head img{
-  width: 1200px;
-  height: 600px;
+  margin-top: 100px;
+  width: 1000px;
+  height: auto;
 }
 
 .aboutus-head h2{
@@ -1281,7 +1282,7 @@ footer {
   transition: background-size 0.3s; /* Add transition for smoother effect */
 }
 
-.footernav-left a:hover,
+.footernav-left a:hover
 .footernav-center a:hover{
   color: white;
   font-weight: bold;
