@@ -13,7 +13,7 @@ if (isset($_POST['payBtn'])) {
     $address = $delivery_data['address'];
     $city = $delivery_data['city'];
     $state = $delivery_data['state'];
-    $user_id = 1; // $_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
 
     $stmt = $conn->prepare("INSERT INTO orders(order_cost, user_id, user_name, user_email, user_phone, user_address, user_city, user_state)
                     VALUES (?,?,?,?,?,?,?,?); ");
