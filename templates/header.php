@@ -26,10 +26,10 @@
       
       <!-- Right-aligned links -->
       <div class="topnav-right">
-        <a href="">Contact Us</a>
-        <a href="">Sign In</a>
-        <a href="wishlist.php">wishlist</a>
-        <a href="cart.php">cart</a>
+        <a href="Contact.php">Contact Us</a>
+        <a href="wishlist.php">Wishlist</a>
+        <a href="cart.php">Cart</a>
+        <a href="signout.php">Sign Out</a>
       </div>
     </header>
 
