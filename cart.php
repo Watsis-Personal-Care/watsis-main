@@ -204,8 +204,6 @@ function calculateTotalCart(){
 
     </section>
 
-    <!--Related product-->
-
     <!--Footer-->
     <?php include('templates/footer.php')?>
     <script>
