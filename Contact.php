@@ -66,7 +66,7 @@ if (isset($_POST['submitForm'])) {
 			$errors['phone'] = '*Phone number is required.';
 		} elseif (!ctype_digit($phone)) {
 			$errors['phone'] = '*Phone number must be numeric.';
-		} elseif(!preg_match("/^[0-9]{11}$/", $phone)){ // Corrected the regular expression pattern
+		} elseif(!preg_match("/^[0-9]{10}$/", $phone)){ // Corrected the regular expression pattern
 			$errors['phone'] = '*Phone number should have 10 digits';
 		}		
 		

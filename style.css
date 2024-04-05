@@ -147,11 +147,16 @@
   top: 0;
 }
 
+.sign-in-up-logo img{
+  width: 300px;
+  height: auto;
+}
+
 .sign-in-up-formbox {
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 50px auto;
+    margin: 20px auto;
     background: #fff;
     padding: 5px;
     overflow: hidden;

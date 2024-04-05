@@ -135,7 +135,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body style="padding-top: 0;">
     <div class="sign-in-up-logo">
         <img src = "images\watsis_personal_care-xbg.png" alt="watsis_logo">
     </div>
