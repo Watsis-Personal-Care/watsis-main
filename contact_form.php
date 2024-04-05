@@ -22,7 +22,7 @@
                 <label for="subject"><b>Subject</b></label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
             <div class="feedbackFormButton">
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" name="submitForm" class="btn">Submit</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Back</button>
             </div>
         </form>
