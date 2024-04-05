@@ -56,36 +56,3 @@ function decrement(productId) {
     quantity.value = parseInt(quantity.value) - 1;
   }
 }
-
-function signup() {
-    document.getElementById("login").style.left = "-400px";
-    document.getElementById("signup").style.left = "50px";
-    document.getElementById("sign-in-up-btn").style.left = "110px";
-}
-
-function login() {
-    document.getElementById("login").style.left = "50px";
-    document.getElementById("signup").style.left = "450px";
-    document.getElementById("sign-in-up-btn").style.left = "0px";
-}
-
-// Store active tab before form submission
-function submitLoginForm() {
-    sessionStorage.setItem('activeTab', 'login');
-    // AJAX submission logic
-}
-
-function submitSignupForm() {
-    sessionStorage.setItem('activeTab', 'signup');
-    // AJAX submission logic
-}
-
-// Ensure that the same tab is displayed after page reload
-document.addEventListener('DOMContentLoaded', function() {
-    var activeTab = sessionStorage.getItem('activeTab');
-    if (activeTab === 'signup') {
-        signup();
-    } else {
-        login();
-    }
-});
