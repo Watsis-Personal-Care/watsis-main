@@ -38,9 +38,10 @@
             $username = $_POST['signin_uname'];
             $password = $_POST['signin_psw'];
 
-            $checkUsername = "SELECT user_id, user_username FROM users WHERE user_username = ? AND user_password = ?";
-            $stmt = $conn->prepare($checkUsername);
-            $stmt->bind_param("ss", $username, $password); // Bind username and password
+            // Retrieve hashed password from the database
+            $checkPasswordQuery = "SELECT user_id, user_password FROM users WHERE user_username = ?";
+            $stmt = $conn->prepare($checkPasswordQuery);
+            $stmt->bind_param("s", $username);
             $stmt->execute();
             $result = $stmt->get_result();
 
@@ -48,16 +49,25 @@
                 $checkUsernameErr = "Invalid username or password.";
             }
             else {
-                // Fetch the user_id
+                // Fetch the hashed password
                 $row = $result->fetch_assoc();
-                $user_id = $row['user_id'];
-                
-                // Store user_id in session
-                $_SESSION['user_id'] = $user_id;
-                
-                // Redirect to index.php or any other page after successful login
-                header("Location: index.php");
-                exit();
+                $hashed_password = $row['user_password'];
+
+                // Verify the entered password against the hashed password
+                if (password_verify($password, $hashed_password)) {
+                    // Password is correct, log the user in
+                    $user_id = $row['user_id'];
+
+                    // Store user_id in session
+                    $_SESSION['user_id'] = $user_id;
+
+                    // Redirect to index.php or any other page after successful login
+                    header("Location: index.php");
+                    exit();
+                } else {
+                    // Password is incorrect
+                    $checkUsernameErr = "Invalid username or password.";
+                }
             }
         }
     }
@@ -107,7 +117,7 @@
             $email = $_POST['email'];
             $username = $_POST['signup_uname'];
             $password = $_POST['signup_psw'];
-
+        
             $checkUsername = "SELECT user_username FROM users WHERE user_username = ?";
             $stmt = $conn->prepare($checkUsername);
             $stmt->bind_param("s", $username);
@@ -117,9 +127,11 @@
                 $checkUsernameErr2 = "The username has been registered.";
             }
             else {
+                // Hash the password
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $sql = "INSERT INTO users (user_email, user_username, user_password) VALUES (?, ?, ?)";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sss", $email, $username, $password);
+                $stmt->bind_param("sss", $email, $username, $hashed_password); // Insert hashed password
                 $stmt->execute();
                 echo "<script>alert('Registration successful! Please login to continue.');</script>";
                 $signup_uname = $email = '';
