@@ -17,6 +17,7 @@
                     <div class="content">
                         <h1>Watsis</h1>
                         <a href="itemList.php">Explore</a>
+                    </div>
                 </nav>
             </div>
             <div class="promote-prods">
@@ -71,6 +72,11 @@
                         <p>Your satisfaction is our priority</p>
                     </div>
                 </div>
+                <nav>
+                <div class="content">
+                 	<a href="aboutus.php">Explore more about us!</a>
+				</div>
+            </nav>
             </div>
             <div class="homepage-product">
                 <p class="Featured-product">— Featured Product —</p>

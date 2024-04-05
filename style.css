@@ -280,6 +280,25 @@
   font-size: 20px
 }
 
+.brief-aboutus .content{
+  text-align: center;
+}
+.brief-aboutus .content a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  font-size: 24px;
+  border: 2px solid black;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.brief-aboutus .content a:hover {
+  border-color: rgb(59, 86, 74);
+  color: rgb(59, 86, 74);
+}
+
 .Featured-product{
   margin-left: 20px;
   text-align: center;
@@ -986,6 +1005,26 @@ body {
 /* End of style for wishlist page */
 
 /* Start of style for about us page */
+.aboutus-head{
+  text-align:center; 
+  margin-bottom: 50px;
+}
+
+.aboutus-head img{
+  width: 1200px;
+  height: 600px;
+}
+
+.aboutus-head h2{
+  font-size: 30px;
+}
+
+.aboutus-head p{
+  width:50%; 
+  margin:0 auto; 
+  text-align:justify; 
+  font-size: 25px;
+}
 .aboutus-rows {
 	display:flex;
 	flex-direction: row;
