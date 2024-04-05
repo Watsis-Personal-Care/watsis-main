@@ -142,7 +142,7 @@ if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addres
 </head>
 <body>
     <!--Navbar-->
-    <?php include("templates/header.php")?>
+    <?php include('templates/header.php')?>
     <!--Checkout-->
     <div class="checkout">
         <div class="checkout-form-container">

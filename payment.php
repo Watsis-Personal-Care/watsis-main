@@ -160,7 +160,7 @@ if(isset($_POST['payBtn']) && $showPopup){
 </head>
 <body>
     <!--Navbar-->
-    <?php include("templates/header.php")?>
+    <?php include('templates/header.php')?>
     <!--Payment-->
     <div class="payment">
         <div class="checkout-form-container">
