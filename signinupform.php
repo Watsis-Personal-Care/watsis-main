@@ -163,6 +163,5 @@
             <button type="submit" class="sign-in-up-btn" name="signupSubmit" onclick="submitSignupForm()">Sign Up</button>
         </form>
     </div>
-    <?php include("templates/footer.php"); ?>
 </body>
 </html>
