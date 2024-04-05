@@ -1,7 +1,9 @@
 <?php
+    session_start();
+    include("server/connection.php");
+
     $signin_uname = $signin_psw = $email = $signup_uname = $signup_psw = $repeatPsw = '';
     $signin_unameErr = $signin_pswErr = $emailErr = $signup_unameErr = $signup_pswErr = $repeatPswErr = $checkUsernameErr = $checkUsernameErr2 = '';
-    include("server/connection.php");
     $showPopup = false;
 
     // Function to sanitize input data
@@ -36,19 +38,30 @@
             $username = $_POST['signin_uname'];
             $password = $_POST['signin_psw'];
 
-            $checkUsername = "SELECT user_username FROM users WHERE user_username = ?";
+            $checkUsername = "SELECT user_id, user_username FROM users WHERE user_username = ? AND user_password = ?";
             $stmt = $conn->prepare($checkUsername);
-            $stmt->bind_param("s", $username);
+            $stmt->bind_param("ss", $username, $password); // Bind username and password
             $stmt->execute();
             $result = $stmt->get_result();
+
             if ($result->num_rows == 0) {
-                $checkUsernameErr = "The account has not been registered.";
+                $checkUsernameErr = "Invalid username or password.";
             }
             else {
+                // Fetch the user_id
+                $row = $result->fetch_assoc();
+                $user_id = $row['user_id'];
+                
+                // Store user_id in session
+                $_SESSION['user_id'] = $user_id;
+                
+                // Redirect to index.php or any other page after successful login
                 header("Location: index.php");
+                exit();
             }
         }
     }
+
 
     // Validation and processing for signup form
     if (isset($_POST['signupSubmit'])) {
@@ -113,6 +126,7 @@
             }
         }
     }
+
 ?>
 
 <!DOCTYPE html>
