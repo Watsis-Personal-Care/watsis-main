@@ -1,3 +1,32 @@
+<?php
+
+session_start();
+
+include('server\connection.php');
+
+if (isset($_POST['submitForm'])) {
+    //get info and store it in database
+	$user_id = $_SESSION['user_id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $country = $_POST['country'];  
+	$subject = $_POST['subject'];
+
+    $stmt = $conn->prepare("INSERT INTO contact(user_id, user_name, user_email, user_phone, user_country, subject)
+                    VALUES (?,?,?,?,?,?); ");
+
+    $stmt->bind_param('isssss', $user_id, $name, $email, $phone, $country, $subject);
+
+    $stmt_status= $stmt->execute();
+    if (!$stmt_status){
+        header('location: index.php');
+        exit;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,9 +66,9 @@
 			$errors['phone'] = '*Phone number is required.';
 		} elseif (!ctype_digit($phone)) {
 			$errors['phone'] = '*Phone number must be numeric.';
-		} elseif(!preg_match("/^[0,9]{10}$/", $phone)){
+		} elseif(!preg_match("/^[0-9]{11}$/", $phone)){ // Corrected the regular expression pattern
 			$errors['phone'] = '*Phone number should have 10 digits';
-		}
+		}		
 		
 		// Check if there are any errors
 		if (empty($errors)) {

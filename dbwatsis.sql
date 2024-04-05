@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS orders (
     user_id INT(11) NOT NULL,
     user_name VARCHAR(255) NOT NULL,
     user_email VARCHAR(255) NOT NULL,
-    user_phone INT(11) NOT NULL,
+    user_phone VARCHAR(11) NOT NULL,
     user_address VARCHAR(255) NOT NULL,
     user_city VARCHAR(255) NOT NULL,
     user_state VARCHAR(255) NOT NULL
@@ -48,6 +48,16 @@ CREATE TABLE IF NOT EXISTS users(
     user_username VARCHAR(100) NOT NULL UNIQUE KEY,
     user_password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS contact(
+    contact_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
+    user_email VARCHAR(255) NOT NULL,
+    user_phone VARCHAR(11) NOT NULL,
+    user_country VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL
 );
 
 -- Insert value
