@@ -43,13 +43,11 @@ CREATE TABLE IF NOT EXISTS order_items(
 );
 
 CREATE TABLE IF NOT EXISTS users(
-    user_id INT(11) NOT NULL,
-    user_email VARCHAR(100) NOT NULL,
-    user_username VARCHAR(255) NOT NULL,
+    user_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(255) NOT NULL,
+    user_username VARCHAR(100) NOT NULL UNIQUE KEY,
     user_password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY(user_id),
-    UNIQUE KEY(user_email)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Insert value
