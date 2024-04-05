@@ -134,138 +134,35 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <style>
-        /* Style the sign in up tab */
-        .sign-in-up-formbox {
-            width: 380px;
-            height: 500px;
-            position: relative;
-            margin: 6% auto;
-            background: #fff;
-            padding: 5px;
-            overflow: hidden;
-        }
-
-        .sign-in-up-button-box {
-            width: 220px;
-            margin: 35px auto;
-            position: relative;
-            box-shadow: 0 0 20px 9px #ff61241f;
-            border-radius: 30px;
-        }
-
-        .toggle-sign-in-up {
-            padding: 10px 30px;
-            cursor: pointer;
-            background: transparent;
-            border: 0;
-            outline: none;
-            position: relative;
-        }
-
-        #sign-in-up-btn {
-            top: 0;
-            left: 0;
-            position: absolute;
-            width: 110px;
-            height: 100%; 
-            background: linear-gradient(to right, #ff105f, #ffad06);
-            border-radius: 30px;
-            transition: 0.5s;
-        }
-
-        .input-sign-in-up {
-            top: 180px;
-            position: absolute;
-            width: 280px;
-            transition: 0.5s;
-        }
-
-        .input-sign-details {
-            width: 100%;
-            padding: 10px 0;
-            margin: 5px 0;
-            border-left: 0;
-            border-top: 0;
-            border-right: 0;
-            border-bottom: 1px solid #999;
-            outline: none;
-            background: transparent;
-        }
-
-        .sign-in-up-btn {
-            width: 85%;
-            padding: 10px 30px;
-            cursor: pointer;
-            display: block;
-            margin: auto;
-            border: 0;
-            outline: none;
-            border-radius: 30px;
-        }
-
-        #login {
-            left: 50px;
-        }
-
-        #signup {
-            left: 450px;
-        }
-
-        .error {
-            color: red;
-        }
-        /* End of styling sign in up form*/
-    </style>
 </head>
 <body>
-    <?php include('templates/header.php') ?>
-    <div class="hero">
-        <div class="sign-in-up-formbox">
-            <div class="sign-in-up-button-box">
-                <div id="sign-in-up-btn"></div>
-                <button type="button" class="toggle-sign-in-up" onclick="login()">Log In</button>
-                <button type="button" class="toggle-sign-in-up" onclick="signup()">Sign up</button>
-            </div>
-            <form id="login" class="input-sign-in-up" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <span class="error"><?php echo $checkUsernameErr; ?></span>
-                <input type="text" class="input-sign-details" placeholder="Username" name="signin_uname" value="<?= htmlspecialchars($signin_uname) ?>">
-                <span class="error"><?php echo $signin_unameErr; ?></span>
-                <input type="password" class="input-sign-details" placeholder="Password" name="signin_psw">
-                <span class="error"><?php echo $signin_pswErr; ?></span>
-                <button type="submit" class="sign-in-up-btn" name="loginSubmit">Log In</button>
-            </form>
-            <form id="signup" class="input-sign-in-up" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <span class="error"><?php echo $checkUsernameErr2; ?></span>
-                <input type="text" class="input-sign-details" placeholder="Username" name="signup_uname" value="<?= htmlspecialchars($signup_uname) ?>">
-                <span class="error"><?php echo $signup_unameErr; ?></span>
-                <input type="text" class="input-sign-details" placeholder="Email" name="email" value="<?= htmlspecialchars($email) ?>">
-                <span class="error"><?php echo $emailErr; ?></span>
-                <input type="password" class="input-sign-details" placeholder="Password" name="signup_psw">
-                <span class="error"><?php echo $signup_pswErr; ?></span>
-                <input type="password" class="input-sign-details" placeholder="Repeat Password" name="repeatPsw">
-                <span class="error"><?php echo $repeatPswErr; ?></span>
-                <button type="submit" class="sign-in-up-btn" name="signupSubmit">Sign Up</button>
-            </form>
+    <div class="sign-in-up-formbox">
+        <div class="sign-in-up-button-box">
+            <div id="sign-in-up-btn"></div>
+            <button type="button" class="toggle-sign-in-up" onclick="login()">Log In</button>
+            <button type="button" class="toggle-sign-in-up" onclick="signup()">Sign up</button>
         </div>
+        <form id="login" class="input-sign-in-up" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <span class="error"><?php echo $checkUsernameErr; ?></span>
+            <input type="text" class="input-sign-details" placeholder="Username" name="signin_uname" value="<?= htmlspecialchars($signin_uname) ?>">
+            <span class="error"><?php echo $signin_unameErr; ?></span>
+            <input type="password" class="input-sign-details" placeholder="Password" name="signin_psw">
+            <span class="error"><?php echo $signin_pswErr; ?></span>
+            <button type="submit" class="sign-in-up-btn" name="loginSubmit" onclick="submitLoginForm()">Log In</button>
+        </form>
+        <form id="signup" class="input-sign-in-up" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <span class="error"><?php echo $checkUsernameErr2; ?></span>
+            <input type="text" class="input-sign-details" placeholder="Username" name="signup_uname" value="<?= htmlspecialchars($signup_uname) ?>">
+            <span class="error"><?php echo $signup_unameErr; ?></span>
+            <input type="text" class="input-sign-details" placeholder="Email" name="email" value="<?= htmlspecialchars($email) ?>">
+            <span class="error"><?php echo $emailErr; ?></span>
+            <input type="password" class="input-sign-details" placeholder="Password" name="signup_psw">
+            <span class="error"><?php echo $signup_pswErr; ?></span>
+            <input type="password" class="input-sign-details" placeholder="Repeat Password" name="repeatPsw">
+            <span class="error"><?php echo $repeatPswErr; ?></span>
+            <button type="submit" class="sign-in-up-btn" name="signupSubmit" onclick="submitSignupForm()">Sign Up</button>
+        </form>
     </div>
     <?php include("templates/footer.php"); ?>
-    <script>
-        var x =document.getElementById("login");
-        var y =document.getElementById("signup");
-        var z =document.getElementById("sign-in-up-btn");
-
-        function signup() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
-
-        function login() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0px";
-        }
-    </script>
 </body>
 </html>
