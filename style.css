@@ -1281,7 +1281,7 @@ footer {
   transition: background-size 0.3s; /* Add transition for smoother effect */
 }
 
-.footernav-left a:hover
+.footernav-left a:hover,
 .footernav-center a:hover{
   color: white;
   font-weight: bold;
