@@ -46,12 +46,6 @@ foreach ($_SESSION['cart'] as $key => $value) {
     $stmt1->execute();
     }
 }
-// // Check if "Back" button is clicked
-// if(isset($_POST['backBtn'])){
-//     header("Location: delivery.php");
-//     exit; // Ensure script stops executing after redirection
-// }
-
 
 // Define variable and corresponding error variable with empty value
 $cardnameErr = $cardnumberErr = $expmonthErr = $expyearErr = $cvvErr = "";
