@@ -3,50 +3,6 @@
 session_start();
 include('server\connection.php');
 
-if (isset($_POST['payBtn'])) {
-    //get user info and store it in database
-    $order_cost= $_SESSION['total'];
-    $delivery_data = $_SESSION['delivery_data'];
-    $name = $delivery_data['fname'];
-    $email = $delivery_data['email'];
-    $phone = $delivery_data['phone'];
-    $address = $delivery_data['address'];
-    $city = $delivery_data['city'];
-    $state = $delivery_data['state'];
-    $user_id = $_SESSION['user_id'];
-
-    $stmt = $conn->prepare("INSERT INTO orders(order_cost, user_id, user_name, user_email, user_phone, user_address, user_city, user_state)
-                    VALUES (?,?,?,?,?,?,?,?); ");
-
-    $stmt->bind_param('dissssss', $order_cost, $user_id, $name, $email, $phone, $address, $city, $state);
-
-    $stmt_status= $stmt->execute();
-    if (!$stmt_status){
-        header('location: index.php');
-        exit;
-    }
-
-    //issue new order and store order info in database
-    $order_id = $stmt->insert_id;
-    
-//get products from cart (from session)
-foreach ($_SESSION['cart'] as $key => $value) {
-    $product = $_SESSION['cart'][$key];
-    $product_id = $product['product_id'];
-    $product_name = $product['product_name'];
-    $product_price = $product['product_price'];
-    $product_image = $product['product_image'];
-    $product_qty = $product['product_qty'];
-
-    //store each single item in order_items database
-    $stmt1 = $conn->prepare("INSERT INTO order_items(order_id, product_id, product_name, product_price, product_image, product_qty, user_id)
-                    VALUES (?,?,?,?,?,?,?)");
-    $stmt1->bind_param('iisdssi', $order_id, $product_id, $product_name, $product_price, $product_image, $product_qty, $user_id);
-    
-    $stmt1->execute();
-    }
-}
-
 // Define variable and corresponding error variable with empty value
 $cardnameErr = $cardnumberErr = $expmonthErr = $expyearErr = $cvvErr = "";
 $cardname = $cardnumber = $expmonth = $expyear = $cvv = "";
@@ -120,6 +76,52 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     //Show payment successful when no more error in input
     if(empty($cardnameErr)&&empty($cardnumberErr)&&empty($expmonthErr)&&empty($expyearErr)&&empty($cvvErr)){
         $showPopup = true;
+
+        //get user info and store it in database
+        $order_cost= $_SESSION['total'];
+        $delivery_data = $_SESSION['delivery_data'];
+        $name = $delivery_data['fname'];
+        $email = $delivery_data['email'];
+        $phone = $delivery_data['phone'];
+        $address = $delivery_data['address'];
+        $city = $delivery_data['city'];
+        $state = $delivery_data['state'];
+        $user_id = $_SESSION['user_id'];
+
+        $stmt = $conn->prepare("INSERT INTO orders(order_cost, user_id, user_name, user_email, user_phone, user_address, user_city, user_state)
+                        VALUES (?,?,?,?,?,?,?,?); ");
+
+        $stmt->bind_param('dissssss', $order_cost, $user_id, $name, $email, $phone, $address, $city, $state);
+
+        $stmt_status= $stmt->execute();
+        if (!$stmt_status){
+            echo "Error: Unable to process your order. Please try again later.";
+            exit;
+        }
+
+        //issue new order and store order info in database
+        $order_id = $stmt->insert_id;
+        
+        //get products from cart (from session)
+        foreach ($_SESSION['cart'] as $key => $value) {
+            $product = $_SESSION['cart'][$key];
+            $product_id = $product['product_id'];
+            $product_name = $product['product_name'];
+            $product_price = $product['product_price'];
+            $product_image = $product['product_image'];
+            $product_qty = $product['product_qty'];
+        
+            //store each single item in order_items database
+            $stmt1 = $conn->prepare("INSERT INTO order_items(order_id, product_id, product_name, product_price, product_image, product_qty, user_id)
+                            VALUES (?,?,?,?,?,?,?)");
+            $stmt1->bind_param('iisdssi', $order_id, $product_id, $product_name, $product_price, $product_image, $product_qty, $user_id);
+            
+            $stmt1->execute();
+        }
+
+        //Unset session variables, remove delivery data and the order item from cart
+        unset($_SESSION['delivery_data']);
+        unset($_SESSION['cart']);
     }
 }
 
@@ -130,14 +132,6 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
   }
-
-
-// If payment is successful, unset session variables
-if(isset($_POST['payBtn']) && $showPopup){
-    unset($_SESSION['delivery_data']);
-    unset($_SESSION['cart']);
-}
-
 
 ?>
 

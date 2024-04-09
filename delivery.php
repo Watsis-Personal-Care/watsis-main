@@ -2,12 +2,6 @@
 
 session_start();
 
-// Check if "Back" button is clicked
-// if(isset($_POST['backBtn'])){
-//     header("Location: cart.php");
-//     exit; // Ensure script stops executing after redirection
-// }
-
 //Define error variables and variables with empty value
 $fnameErr = $emailErr = $phoneErr = $addressErr = $cityErr = $stateErr = "";
 $fname = $email = $phone = $address = $city = $state = "";
@@ -116,6 +110,7 @@ $address = isset($_POST['address']) ? $_POST['address'] : $address;
 $city = isset($_POST['city']) ? $_POST['city'] : $city;
 $state = isset($_POST['state']) ? $_POST['state'] : $state;
 
+// Store and display the invalid input when user updates their input
 $_SESSION['delivery_data'] = array(
     'fname' => $fname,
     'email' => $email,
@@ -124,9 +119,6 @@ $_SESSION['delivery_data'] = array(
     'city' => $city,
     'state' => $state
 );
-
-if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addressErr) || !empty($cityErr) || !empty($stateErr)){
-}
 
 ?>
 
@@ -155,7 +147,7 @@ if(!empty($fnameErr) || !empty($emailErr) || !empty($phoneErr) || !empty($addres
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="checkout-form">
                 <div class="corow">
                     <div class="col-50">
-                        <h3>Delivery Address</h3>
+                        <h3>Delivery Information</h3>
                         <div class="nameInput">
                             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
                             <input type="text" id="fname" name="fname" placeholder="John M. Doe" value="<?php echo isset($_SESSION['delivery_data']['fname']) ? htmlspecialchars($_SESSION['delivery_data']['fname']) : ''; ?>">
