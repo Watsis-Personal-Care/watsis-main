@@ -30,7 +30,7 @@
 </head>
 <body>
     <!--Nav Bar-->
-    <?php include('templates/header.php')?>
+<?php include('templates/header.php')?>
 
    <!--Item Details-->
     <section id="prodetails" class="section-p1">

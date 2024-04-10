@@ -26,11 +26,11 @@
 </head>
 <body>
     <!--Nav Bar-->
-    <?php include('templates/header.php')?>
+	<?php include('templates/header.php')?>
     <!--Item List-->
 
 	<div class="header-itemList">
-		<img class="itemList-pic" src="images/background2.png" alt="background_pic" width="100%">
+		<img class="itemList-pic" src="images/background2.png" alt="background_pic">
             <nav>
                 <div class="content">
                     <h1>Watsis</h1>
