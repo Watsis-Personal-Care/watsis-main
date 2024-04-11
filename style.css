@@ -236,6 +236,9 @@
 /* Homepage scroller styles*/
 .homepage {
   font-size: 40px;
+  width: 100%; /* Set width to 100% */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
 }
 
 .homepage .backVideo{
@@ -257,17 +260,18 @@
   z-index:-1;
 }
 
-@media(min-aspect-ratio: 16/9){
-  .back-video{
-    width: 100%;
-    height:auto;
+@media screen and (max-width: 430px) {
+  .homepage {
+    font-size: 30px; /* Adjust font size for smaller screens */
   }
-}
-
-@media(max-aspect-ratio: 16/9){
-  .back-video{
-    width: auto;
-    height:100%;
+  .homepage .backVideo {
+    height: auto; /* Make height auto for smaller screens */
+  }
+  
+  .homepage .backVideo .back-video {
+    width: 100%; /* Make the video full width on smaller screens */
+    height: 50vh; /* Maintain aspect ratio */
+    position: static; /* Remove absolute positioning */
   }
 }
 
@@ -1768,6 +1772,5 @@ footer {
   }
 
 }
-
 
 
