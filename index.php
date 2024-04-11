@@ -19,7 +19,9 @@ if(!isset($_SESSION['user_id'])) {
         <script src="script.js"></script>
     </head>
     <body>
-        <?php include('templates/header.php') ?>
+        <!--Nav Bar-->
+        <?php include('templates/header.php')?>
+        
         <div class="homepage">
         <div class="backVideo">
             <video autoplay loop muted plays-inline class="back-video">
