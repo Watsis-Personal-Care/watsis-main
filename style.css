@@ -61,6 +61,14 @@
   margin: 10px;
 }
 
+.dot1, .dot2, .dot3 {
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
 .closebtn2 {
   display: none;
 }
@@ -149,6 +157,7 @@
   height: 5px;
   background-color: #333;
   margin: 6px 0;
+  border-radius: 25px;
   transition: 0.4s;
 }
 
