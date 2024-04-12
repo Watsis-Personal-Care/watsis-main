@@ -28,9 +28,9 @@
       <div class="topnav-right">
         <span onclick="openNav2()">
           <div class="barscontainer2" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
           </div>
         </span>
         <a href="Contact.php">Contact Us</a>
