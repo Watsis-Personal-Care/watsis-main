@@ -534,6 +534,12 @@
 
 /* Responsive Homepage(for mobile devices) */
 @media screen and (max-width: 430px) {
+  .copyright{
+    margin-top: 130px;
+    font-size: 7px;
+  }
+
+
   .homepage .backVideo{
     height:24vh;
   }
@@ -609,7 +615,7 @@ body {
   position: relative;
   margin:0;
   padding-bottom: 440px;
-  padding-top: 200px;
+  padding-top: 130px;
 }
 
 .cart .heading{
@@ -1058,6 +1064,10 @@ body {
   .checkout-form,
   .payment-form{
     margin-left: 80px;
+  }
+
+  body{
+    padding-top: 200px;
   }
 }
 /* End of checkout page */
@@ -1536,7 +1546,7 @@ footer {
 
 /*Copyright style*/
 .copyright{
-  margin-top: 130px;
+  margin-top: 120px;
 }
 
 .footer-right{
