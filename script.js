@@ -10,28 +10,62 @@ function closeNav() {
   document.body.style.color = "black";
 }
 
+function openNav2() {
+  document.querySelector(".smallScreenSideNav").style.width = "250px";
+  document.body.style.color = "rgba(0,0,0,0.4)";
+}
+
+function closeNav2() {
+  document.querySelector(".smallScreenSideNav").style.width = "0";
+  document.body.style.color = "black";
+}
+
 // Set the animation for the side navigation menu icon
 function myFunction(x) {
   x.classList.toggle("change");
 }
 
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+  scrollFunction();
+  scrollFunctionSmallScreen();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector(".topnav").style.padding = "30px 10px";
-    document.querySelector(".logo").style.width= "175px";
-  } else {
-    document.querySelector(".topnav").style.padding = "90px 10px";
-    document.querySelector(".logo").style.width= "375px";
-  } 
+  if (window.innerWidth > 600) {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.querySelector(".topnav").style.padding = "30px 10px";
+      document.querySelector(".logo").style.width= "175px";
+    } else {
+      document.querySelector(".topnav").style.padding = "90px 10px";
+      document.querySelector(".logo").style.width= "375px";
+    } 
+  
+    // Show the back-to-top button when user scrolls down
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+          document.getElementById("back-to-top-btn").style.display = "none";
+    }
+  }
+}
 
-  // Show the back-to-top button when user scrolls down
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("back-to-top-btn").style.display = "block";
-  } else {
-        document.getElementById("back-to-top-btn").style.display = "none";
+function scrollFunctionSmallScreen() {
+  if (window.innerWidth <= 600) {
+    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+      document.querySelector(".topnav").style.padding = "15px 10px";
+      document.querySelector(".logo").style.width= "150px";
+    } else {
+      document.querySelector(".topnav").style.padding = "30px 10px";
+      document.querySelector(".logo").style.width= "200px";
+    } 
+
+    // Show the back-to-top button when user scrolls down
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+      document.getElementById("back-to-top-btn").style.display = "none";
+    }
   }
 }
 
