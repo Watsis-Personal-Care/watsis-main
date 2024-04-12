@@ -26,6 +26,13 @@
       
       <!-- Right-aligned links -->
       <div class="topnav-right">
+        <span onclick="openNav2()">
+          <div class="barscontainer2" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </span>
         <a href="Contact.php">Contact Us</a>
         <a href="wishlist.php">Wishlist</a>
         <a href="cart.php">Cart</a>
@@ -42,6 +49,14 @@
       <a href="itemList.php#DentalCare">Dental Care</a>
       <a href="itemList.php#HairCare">Hair Care</a>
       <a href="itemList.php#SkinCare">Skin Care</a>
+    </div>
+
+    <div class="smallScreenSideNav">
+      <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
+        <a href="Contact.php">Contact Us</a>
+        <a href="wishlist.php">Wishlist</a>
+        <a href="cart.php">Cart</a>
+        <a href="signout.php">Sign Out</a>
     </div>
   </body>
 </html>
