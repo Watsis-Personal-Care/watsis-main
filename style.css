@@ -1275,6 +1275,25 @@ body {
 hr {
 	width: 75%;;
 }
+
+@media screen and (max-width: 430px) {
+  .aboutus-head img {
+    width: 300px;
+  }
+
+  .aboutus-head p {
+    font-size: 15px;
+  }
+
+  .aboutus-rows img {
+    width: 150px;
+    margin: auto auto;
+  }
+
+  .aboutus-rows{
+    flex-direction: column;
+  }
+}
 /* End of style for about us page*/
 
 /*Contact Us page start here*/
