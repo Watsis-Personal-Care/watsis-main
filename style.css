@@ -861,6 +861,10 @@ body {
     margin-top: 20px; /* Adjust margin for spacing */
     width: auto; /* Make it full width */
   }
+
+  .cart .box_container .empty_cart_message{
+    margin:0px 10px 100px;
+  }
 }
 /* End of style for cart page */
 
@@ -1220,7 +1224,6 @@ body {
     display:block;
     flex-basis: calc(100% - 15px); /* Each box takes 100% width with gap in between on smaller screens */
     max-width: calc(100% - 15px); /* Set a maximum width for the boxes on smaller screens */
-    margin-left: 60px;
   }
 
   .wishlist .box_container .box .product .image img{
@@ -1230,6 +1233,10 @@ body {
 
   .wishlist .box_container .box .product .content .prod_name{
     font-size: 16px;
+  }
+
+  .wishlist .box_container .empty_wishlist_message {
+    margin: 0px 10px 100px;
   }
 }
 
