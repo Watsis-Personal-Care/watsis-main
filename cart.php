@@ -114,6 +114,8 @@ function calculateTotalCart(){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
 </head>
 <body>

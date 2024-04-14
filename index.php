@@ -15,6 +15,7 @@ if(!isset($_SESSION['user_id'])) {
     <head>
         <title>Watsis Personal Care</title>
         <script src="https://kit.fontawesome.com/34fcbc38f7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
