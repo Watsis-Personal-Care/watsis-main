@@ -72,77 +72,6 @@
 .closebtn2 {
   display: none;
 }
-/* Responsive navigation menu (for mobile devices) */
-/* Responsive navigation menu (for mobile devices) */
-@media screen and (max-width: 600px) {
-  .topnav {
-    padding: 30px 5px;
-  }
-
-  .topnav-centered {
-    display: flex;
-  }
-
-  .topnav-centered a {
-    left: 48%;
-  }
-
-  .logo {
-    width: relative;
-    max-width: 250px;
-  }
-
-  .barscontainer2 {
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
-  .topnav-right {
-    padding-right: 10px;
-  }
-
-  .topnav-right a {
-    display: none;
-  }
-
-  .smallScreenSideNav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #e9e9e9; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-
-  .smallScreenSideNav a {
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    color: #202020;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .smallScreenSideNav a:hover {
-    color: #000000;
-    font-weight: bold;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .smallScreenSideNav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-}
 /*End Style for header*/
 
 /* The side navigation menu icon*/
@@ -200,11 +129,6 @@
   margin-left: 50px;
 }
   
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 430px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 /*End Style for Side bar menu*/
 
 /* Style the sign in up tab */
@@ -322,20 +246,6 @@
   right:0;
   bottom:0;
   z-index:-1;
-}
-
-@media(min-aspect-ratio: 16/9){
-  .back-video{
-    width: 100%;
-    height:auto;
-  }
-}
-
-@media(max-aspect-ratio: 16/9){
-  .back-video{
-    width: auto;
-    height:100%;
-  }
 }
 
 .homepage .backVideo .content{
@@ -532,80 +442,7 @@
   color:grey;
 }
 
-/* Responsive Homepage(for mobile devices) */
-@media screen and (max-width: 430px) {
-  .copyright{
-    margin-top: 130px;
-    font-size: 7px;
-  }
 
-
-  .homepage .backVideo{
-    height:24vh;
-  }
-
-  .homepage .backVideo .back-video {
-    width: 100%; 
-    height:100%;
-  }
-  .homepage .backVideo .content{
-    width: 60%; 
-  }
-
-  .homepage .backVideo .content h1{
-    font-size: 50px; 
-  }
-
-  .homepage .backVideo .content a{
-    font-size: 15px; 
-    padding: 10px 40px; 
-  }
-
-  .promote-prod{
-    flex-direction: column;
-    width: 80%;
-  }
-
-  .promote-prod a {
-    width: 60%;
-    margin: auto;
-  }
-
-  .promote-prod a {
-    width: 60%;
-    margin: auto;
-  }
-
-  .promote-prod-desc {
-    width: 100%;
-    margin: auto;
-  }
-
-  .briefings {
-    flex-direction: column; 
-    align-items: center; 
-    margin: 20px 0; 
-  }
-
-  .briefing {
-    margin: 20px 0; 
-    width: auto; 
-    font-size: 16px; 
-  }
-
-  .Featured-product {
-    margin-left: 10px; 
-  }
-
-  .homepage-scroll-container img {
-    width:400px;
-    padding: 10px;
-  }
-
-  .image-container h5 {
-    font-size: 16px; 
-  }
-}
 
 /* End of Homepage scroller styles*/
 
@@ -806,66 +643,6 @@ body {
 .cart .box_container .empty_cart_message a:hover {
   text-decoration: underline;
 }
-
-@media screen and (max-width: 430px){
-  .cart .heading{
-    font-size: 25px;
-    padding: 40px;
-  }
-
-  .cart .box_container {
-    flex-direction: column; /* Change to column layout */
-  }
-
-  .cart .box_container .prod_box {
-    width: auto; /* Reset width to auto for responsiveness */
-    margin-right: 0; /* Remove margin on smaller screens */
-}
-
-  .cart .box_container .prod_box .cart_prod{
-    grid-template-columns: auto 1fr 2fr auto;
-    grid-template-rows: 180px;
-  }
-
-  .cart .box_container .prod_box .cart_prod .prod_img img{
-    width: 130px;
-    height: 130px;
-  }
-
-  .cart .box_container .prod_box .cart_prod .prod_info{
-    grid-template-rows: 1fr auto auto;
-  }
-
-  .cart .box_container .prod_box .cart_prod .prod_price{
-    font-size: 12px;
-  }
-
-  .cart .box_container .prod_box .cart_prod .prod_name{
-    font-size: 12px;
-  }
-
-  .cart .box_container .prod_box .cart_prod .quantity input {
-    width: 15px;
-  }
-
-  .cart .box_container .prod_box .cart_prod .prod_total{
-    padding: 50px 0 0 0;
-    line-height: 20px;
-    font-size: 12px;
-  }
-
-  .cart .box_container .checkout_box {
-    position: relative; /* Reset position */
-    right: 0; /* Reset position */
-    top: 0; /* Reset position */
-    margin-top: 20px; /* Adjust margin for spacing */
-    width: auto; /* Make it full width */
-  }
-
-  .cart .box_container .empty_cart_message{
-    margin:0px 10px 100px;
-  }
-}
 /* End of style for cart page */
 
 /* Style for checkout page */
@@ -1063,17 +840,6 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   align-items: center;
 }
-
-@media screen and (min-width: 440px){
-  .checkout-form,
-  .payment-form{
-    margin-left: 80px;
-  }
-
-  body{
-    padding-top: 200px;
-  }
-}
 /* End of checkout page */
 
 
@@ -1213,33 +979,6 @@ body {
 .wishlist .box_container .empty_wishlist_message a:hover {
   color: rgb(29, 112, 78);
 }
-
-@media screen and (max-width: 430px){
-  .wishlist .box_container{
-    padding: 20px 20px;
-  }
-
-  .wishlist .box_container .box {
-    position: relative;
-    display:block;
-    flex-basis: calc(100% - 15px); /* Each box takes 100% width with gap in between on smaller screens */
-    max-width: calc(100% - 15px); /* Set a maximum width for the boxes on smaller screens */
-  }
-
-  .wishlist .box_container .box .product .image img{
-    width: 200px;
-    height: 200px;
-  }
-
-  .wishlist .box_container .box .product .content .prod_name{
-    font-size: 16px;
-  }
-
-  .wishlist .box_container .empty_wishlist_message {
-    margin: 0px 10px 100px;
-  }
-}
-
 /* End of style for wishlist page */
 
 /* Start of style for about us page */
@@ -1300,25 +1039,6 @@ body {
 
 hr {
 	width: 75%;;
-}
-
-@media screen and (max-width: 430px) {
-  .aboutus-head img {
-    width: 300px;
-  }
-
-  .aboutus-head p {
-    font-size: 15px;
-  }
-
-  .aboutus-rows img {
-    width: 150px;
-    margin: auto auto;
-  }
-
-  .aboutus-rows{
-    flex-direction: column;
-  }
 }
 /* End of style for about us page*/
 
@@ -1406,6 +1126,10 @@ hr {
   right: 35px;
   width: 280px;
   
+}
+
+.open-button:hover{
+  background-color: #3d3d3d;
 }
 
 /* The popup form - hidden by default */
@@ -1894,9 +1618,23 @@ footer {
   
 }
 
-/* Responsive Single product (for mobile devices) */
-@media screen and (max-width: 430px) {
 
+@media(min-aspect-ratio: 16/9){
+  .back-video{
+    width: 100%;
+    height:auto;
+  }
+}
+
+@media(max-aspect-ratio: 16/9){
+  .back-video{
+    width: auto;
+    height:100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  /* Responsive Single product (for mobile devices) */
   #prodetails{
     display:flex;
     flex-direction:column;
@@ -1909,10 +1647,8 @@ footer {
   #prodetails .single-pro-details{
     width:100%;
   }
-}
 
-/* Responsive Product list (for mobile devices) */
-@media screen and (max-width: 430px) {
+  /* Responsive Product list (for mobile devices) */
   .header-itemList {
     height: 30vh;
   }
@@ -1939,6 +1675,265 @@ footer {
     margin: 30px;
   }
 
+  /* Responsive Homepage(for mobile devices) */
+  .copyright{
+    margin-top: 130px;
+    font-size: 7px;
+  }
+
+  .homepage .backVideo{
+    height:24vh;
+  }
+
+  .homepage .backVideo .back-video {
+    width: 100%; 
+    height:100%;
+  }
+  .homepage .backVideo .content{
+    width: 60%; 
+  }
+
+  .homepage .backVideo .content h1{
+    font-size: 50px; 
+  }
+
+  .homepage .backVideo .content a{
+    font-size: 15px; 
+    padding: 10px 40px; 
+  }
+
+  .promote-prod{
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .promote-prod a {
+    width: 60%;
+    margin: auto;
+  }
+
+  .promote-prod a {
+    width: 60%;
+    margin: auto;
+  }
+
+  .promote-prod-desc {
+    width: 100%;
+    margin: auto;
+  }
+
+  .briefings {
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px 0; 
+  }
+
+  .briefing {
+    margin: 20px 0; 
+    width: auto; 
+    font-size: 16px; 
+  }
+
+  .Featured-product {
+    margin-left: 10px; 
+  }
+
+  .homepage-scroll-container img {
+    width:400px;
+    padding: 10px;
+  }
+
+  .image-container h5 {
+    font-size: 16px; 
+  }
+
+  /*Responsive for cart*/
+  .cart .heading{
+    font-size: 25px;
+    padding: 40px;
+  }
+
+  .cart .box_container {
+    flex-direction: column; /* Change to column layout */
+  }
+
+  .cart .box_container .prod_box {
+    width: auto; /* Reset width to auto for responsiveness */
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+
+  .cart .box_container .prod_box .cart_prod{
+    grid-template-columns: auto 1fr 2fr auto;
+    grid-template-rows: 180px;
+  }
+
+  .cart .box_container .prod_box .cart_prod .prod_img img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .cart .box_container .prod_box .cart_prod .prod_info{
+    grid-template-rows: 1fr auto auto;
+  }
+
+  .cart .box_container .prod_box .cart_prod .prod_price{
+    font-size: 12px;
+  }
+
+  .cart .box_container .prod_box .cart_prod .prod_name{
+    font-size: 12px;
+  }
+
+  .cart .box_container .prod_box .cart_prod .quantity input {
+    width: 15px;
+  }
+
+  .cart .box_container .prod_box .cart_prod .prod_total{
+    padding: 50px 0 0 0;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .cart .box_container .checkout_box {
+    position: relative; /* Reset position */
+    right: 0; /* Reset position */
+    top: 0; /* Reset position */
+    margin-top: 20px; /* Adjust margin for spacing */
+    width: auto; /* Make it full width */
+  }
+
+  .cart .box_container .empty_cart_message{
+    margin:0px 10px 100px;
+  }
+
+  /*Responsive for wishlist*/
+  .wishlist .box_container{
+    padding: 20px 20px;
+  }
+
+  .wishlist .box_container .box {
+    position: relative;
+    display:block;
+    flex-basis: calc(100% - 15px); /* Each box takes 100% width with gap in between on smaller screens */
+    max-width: calc(100% - 15px); /* Set a maximum width for the boxes on smaller screens */
+  }
+
+  .wishlist .box_container .box .product .image img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .wishlist .box_container .box .product .content .prod_name{
+    font-size: 16px;
+  }
+
+  .wishlist .box_container .empty_wishlist_message {
+    margin: 0px 10px 100px;
+  }
+
+  /*Responsive for about us*/
+  .aboutus-head img {
+    width: 300px;
+  }
+
+  .aboutus-head p {
+    font-size: 15px;
+  }
+
+  .aboutus-rows img {
+    width: 150px;
+    margin: auto auto;
+  }
+
+  .aboutus-rows{
+    flex-direction: column;
+  }
 }
 
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav {
+    padding: 30px 5px;
+  }
 
+  .topnav-centered {
+    display: flex;
+  }
+
+  .topnav-centered a {
+    left: 48%;
+  }
+
+  .logo {
+    width: relative;
+    max-width: 250px;
+  }
+
+  .barscontainer2 {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .topnav-right {
+    padding-right: 10px;
+  }
+
+  .topnav-right a {
+    display: none;
+  }
+
+  .smallScreenSideNav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #e9e9e9; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+  .smallScreenSideNav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #202020;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .smallScreenSideNav a:hover {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .smallScreenSideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 430px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Responsive for checkout and payment form*/
+@media screen and (min-width: 440px){
+  .checkout-form,
+  .payment-form{
+    margin-left: 80px;
+  }
+
+  body{
+    padding-top: 200px;
+  }
+}
