@@ -76,7 +76,7 @@
 		$errors = [];
 		include('contact_form.php');
 	}
-	?>
+?>
 
 
 <!DOCTYPE html>
