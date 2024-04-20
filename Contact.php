@@ -1,4 +1,9 @@
 <?php
+
+	session_start();
+
+	include('server\connection.php');
+
 	// contact/index.php
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		// Initialize variables
@@ -40,30 +45,26 @@
 			echo 'Thank you for contacting us! We will get back to you shortly.';
 			echo "</div>";
 
-			session_start();
+			if (isset($_POST['submitForm'])) {
+				//get info and store it in database
+				$user_id = $_SESSION['user_id'];
+				$name = $_POST['name'];
+				$email = $_POST['email'];
+				$phone = $_POST['phone'];
+				$country = $_POST['country'];  
+				$subject = $_POST['subject'];
 
-		include('server\connection.php');
+				$stmt = $conn->prepare("INSERT INTO contact(user_id, user_name, user_email, user_phone, user_country, subject)
+								VALUES (?,?,?,?,?,?); ");
 
-		if (isset($_POST['submitForm'])) {
-			//get info and store it in database
-			$user_id = $_SESSION['user_id'];
-			$name = $_POST['name'];
-			$email = $_POST['email'];
-			$phone = $_POST['phone'];
-			$country = $_POST['country'];  
-			$subject = $_POST['subject'];
+				$stmt->bind_param('isssss', $user_id, $name, $email, $phone, $country, $subject);
 
-			$stmt = $conn->prepare("INSERT INTO contact(user_id, user_name, user_email, user_phone, user_country, subject)
-							VALUES (?,?,?,?,?,?); ");
-
-			$stmt->bind_param('isssss', $user_id, $name, $email, $phone, $country, $subject);
-
-			$stmt_status= $stmt->execute();
-			if (!$stmt_status){
-				header('location: index.php');
-				exit;
+				$stmt_status= $stmt->execute();
+				if (!$stmt_status){
+					header('location: index.php');
+					exit;
+				}
 			}
-		}
 		} else {
 			// Redisplay the form, with error messages
 			include('contact_form.php');
