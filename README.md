@@ -13,32 +13,34 @@ To run the website Watsis (you must have WampServer):
 
 Samples of the website:
 
-#Contact Us
+Contact Us
 
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/c3780fe9-6b37-4ce6-8236-d7e581f78cf7)
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/83f6d073-06c1-4786-8dc4-845584a9eb16)
 
 
-#Product List
+Product List
 
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/171298ee-c8a7-4283-9ac4-dca095ac0ca8)
 
 
-#Product Details
+Product Details
 
-![image](https://github.com/Watsis-Personal-Care/watsis/assets/84895009/7fae9cdb-3fa5-4add-bd49-45c63db6491d)
+![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/f4504e3b-f343-42bf-9bec-1649621084fa)
+![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/50de4765-5b33-4d30-8a32-1b56004237b2)
 
-#Wishlist
+
+Wishlist
 
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/821d168e-60d8-4c96-ba7f-7b83f1ca36ce)
 
 
-#Cart
+Cart
 
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/81fe3b23-fbd7-4792-851b-6f4f47523873)
 
 
-#Payment
+Payment
 
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/2b0ea4e9-7920-469e-9557-f5c0e89f5adb)
 ![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/097bcb37-b9fa-47c0-af65-3692ec41a2da)
