@@ -20,7 +20,6 @@ Contact Us
 
 Product List
 
-<img width="460" alt="image" src="https://github.com/Watsis-Personal-Care/watsis/assets/84895009/f2c5cab5-777c-4426-b008-c8b98a4b5eea">
 ![image](https://github.com/Watsis-Personal-Care/watsis/assets/84895009/5f5bcd8b-28e3-4a9a-b339-5fff8db713dd)
 
 Product Details
