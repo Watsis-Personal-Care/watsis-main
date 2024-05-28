@@ -5,10 +5,10 @@ To run the website Watsis (you must have WampServer):
 4) Import the dbwatsis.sql file.
 5) Once the database is imported successfully, run the signinupform.php in your browser. (URL: http://localhost/watsis/signinupform.php)
 6) Go to the sign-up page and sign up your Watsis account.
-![image](https://github.com/Watsis-Personal-Care/watsis/assets/84895009/2c67044e-6c3b-4825-b4da-81bf485458dd)
-7) Login to the Watsis website by using the username and password created just now.
+![image](https://github.com/Watsis-Personal-Care/watsis-main/assets/84895009/c332708b-c991-400a-b836-3d031dfaa0d8)
+8) Login to the Watsis website by using the username and password created just now.
 ![image](https://github.com/Watsis-Personal-Care/watsis/assets/84895009/79f60a3d-d74a-4f83-81f6-baa5c131cdfe)
-8) Now you are free to use the website
+9) Now you are free to use the website
 ![image](https://github.com/Watsis-Personal-Care/watsis/assets/84895009/489efc9d-0be4-45f1-bd8e-b628b8d59883)
 
 Samples of the website:
